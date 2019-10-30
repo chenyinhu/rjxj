@@ -1,0 +1,377 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>一蓑烟雨个人博客</title>
+<meta name="keywords" content="一蓑烟雨个人博客" />
+<meta name="description" content="一蓑烟雨个人博客" />
+<link href="../css/base.css" rel="stylesheet">
+<link href="../css/main.css" rel="stylesheet">
+<link href="../css/m.css" rel="stylesheet">
+<!--[if lt IE 9]>
+<script src="js/modernizr.js"></script>
+<![endif]-->
+<script type="text/javascript" src="js/jquery.js"></script>
+</head>
+<body>
+<script>
+window.onload = function ()
+{
+	var oH2 = document.getElementsByTagName("h2")[0];
+	var oUl = document.getElementsByTagName("ul")[0];
+	oH2.onclick = function ()
+	{
+		var style = oUl.style;
+		style.display = style.display == "block" ? "none" : "block";
+		oH2.className = style.display == "block" ? "open" : ""
+	}
+}
+</script>
+<div id="wrapper">
+  <header>
+    <div class="headtop"></div>
+    <div class="contenttop">
+      <div class="logo f_l">一蓑烟雨个人博客</div>
+      <div class="search f_r">
+        <form action="/e/search/index.php" method="post" name="searchform" id="searchform">
+          <input name="keyboard" id="keyboard" class="input_text" value="请输入关键字" style="color: rgb(153, 153, 153);" onfocus="if(value=='请输入关键字'){this.style.color='#000';value=''}" onblur="if(value==''){this.style.color='#999';value='请输入关键字'}" type="text">
+          <input name="show" value="title" type="hidden">
+          <input name="tempid" value="1" type="hidden">
+          <input name="tbname" value="news" type="hidden">
+          <input name="Submit" class="input_submit" value="搜索" type="submit">
+        </form>
+      </div>
+      <div class="blank"></div>
+      
+      <div id="mnav">
+    <h2><span class="navicon"></span></h2>
+    <ul>
+      <li><a href="../">网站首页</a></li>
+      <li><a href="../about.html">关于我</a></li>
+      <li><a href="../download/">模板分享</a>
+         <ul>
+         <li><a href="#.html">关于我</a></li>
+         <li><a href="#.html">关于我</a></li>
+         <li><a href="#.html">关于我</a></li>
+          </ul>
+        </li>
+      <li><a href="/jstt/">学无止境</a>
+            <ul>
+         <li><a href="#.html">关于我</a></li>
+         <li><a href="#.html">关于我</a></li>
+         <li><a href="#.html">关于我</a></li>
+          </ul></li>
+      <li><a href="/news/">慢生活</a>
+            <ul>
+         <li><a href="#.html">关于我</a></li>
+         <li><a href="#.html">关于我</a></li>
+         <li><a href="#.html">关于我</a></li>
+          </ul></li>
+      <li><a href="/e/tool/gbook/?bid=3">留言</a></li>
+    </ul>
+  </div>
+      
+      <nav>
+        <div  class="navigation">
+          <ul class="menu">
+            <li><a href="../index.html">网站首页</a></li>
+            <li><a href="#">关于我</a>
+              <ul>
+                <li><a href="../about.html">个人简介</a></li>
+                <li><a href="../listpic.html">个人相册</a></li>
+              </ul>
+            </li>
+            <li><a href="#">我的日记</a>
+              <ul>
+                <li><a href="../newslistpic.html">个人日记</a></li>
+                <li><a href="../newslistpic.html">学习笔记</a></li>
+              </ul>
+            </li>
+            <li><a href="../newslistpic.html">技术文章</a> </li>
+            <li><a href="#">给我留言</a> </li>
+          </ul>
+        </div>
+      </nav>
+      <SCRIPT type=text/javascript>
+	// Navigation Menu
+	$(function() {
+		$(".menu ul").css({display: "none"}); // Opera Fix
+		$(".menu li").hover(function(){
+			$(this).find('ul:first').css({visibility: "visible",display: "none"}).slideDown("normal");
+		},function(){
+			$(this).find('ul:first').css({visibility: "hidden"});
+		});
+	});
+</SCRIPT> 
+    </div>
+  </header>
+  <div class="container">
+    <div class="con_content">
+      <div class="about_box">
+        <h2 class="nh1"><span>您现在的位置是：<a href="../" target="_blank">网站首页</a>>><a href="../post/3.html" target="_blank">下一篇</a></span><b></b></h2>
+        <div class="f_box">
+          <p class="a_title">Makefile</p>
+          <p class="p_title"></p>
+          <!--  <p class="box_p"><span>发布时间：2017-07-07 15:12:42</span><span>作者：唐孝文</span><span>来源：稽查支队</span><span>点击：111056</span></p>--> 
+          <!-- 可用于内容模板 --> 
+          <p>&nbsp; </p>
+          <p class="con_content">Makefile的基本结构虽然简单，但变化十分丰富，要动手编写一个大工程的Makefile并不容易。所幸有一些诸如Autoconf和Automake这样的工具可以自动生成Makefile文件，因而通常只要能读懂Makefile的内容，并根据需要进行修改就可以了。</p>
+          <p class="con_content">     Makefile内容的核心是一系列的规则，这些规则告诉make程序要做的事以及做这件事所依赖的条件。规则的基本格式是：</p>
+          <p class="con_content">target:  dependency</p>
+          <p class="con_content">  (Tab字符)command</p>
+          <div class="con_content">Ø target(目标): 通常是要产生的文件的名称</div>
+          <div class="con_content">Ø dependency(依赖): 指用来输入从而产生目标的文件</div>
+          <div class="con_content">Ø command(命令):  是make执行的动作，一个规则可以有多条命令，每个命令占一行。命令行的第一个字符是Tab。      &#13;</div>
+<p class="con_content">在本文中，将给大家介绍如何使用 autoconf和automake两个工具来帮助我们自动地生成符合自由软件惯例的Makefile，这样就可以象常见的GNU程序一样，只要使用“./configure”，“make”，“make install”就可以把程序安装到Linux系统中去了。</p>
+          <p class="con_content">编译一个简单的源文件main.c,需要自动生成一个Makefile。</p>
+          <p class="con_content">以下是步骤：</p>
+          <p class="con_content">第一步：</p>
+          <p class="con_content">在某个目录下创建一个文件main.c,其内容如下：</p>
+          <p class="con_content">------------------------------------------------</p>
+          <p class="con_content">#include &lt;stdio.h&gt;</p>
+          <p class="con_content">int main(int argc, char** argv)</p>
+          <p class="con_content">{</p>
+          <p class="con_content"> printf(&quot;Hello, Auto Makefile!\n&quot;);</p>
+          <p class="con_content"> return 0;</p>
+          <p class="con_content">}</p>
+          <p class="con_content">------------------------------------------------</p>
+          <p class="con_content">第二步：</p>
+          <p class="con_content">运行 autoscan , 自动创建两个文件： autoscan.log configure.scan</p>
+          <p class="con_content">此时状态如下：</p>
+          <p class="con_content">[root@localhost main]# autoscan</p>
+          <p class="con_content">[root@localhost main]# ls</p>
+          <p class="con_content">autoscan.log configure.scan main.c</p>
+          <p class="con_content">[root@localhost main]#</p>
+          <p class="con_content">第三步：</p>
+          <p class="con_content">修改configure.scan的文件名为configure.in</p>
+          <p class="con_content">查看configure.in的内容：</p>
+          <p class="con_content">#                                               -*- Autoconf -*-</p>
+          <p class="con_content"># Process this file with autoconf to produce a configure script.</p>
+          <p class="con_content">AC_PREREQ(2.61)</p>
+          <p class="con_content">AC_INIT(FULL-PACKAGE-NAME, VERSION, BUG-REPORT-ADDRESS)</p>
+          <p class="con_content">AC_CONFIG_SRCDIR([main.c])</p>
+          <p class="con_content">AC_CONFIG_HEADER([config.h])</p>
+          <p class="con_content"># Checks for programs.</p>
+          <p class="con_content">AC_PROG_CC</p>
+          <p class="con_content"># Checks for libraries.</p>
+          <p class="con_content"># Checks for header files.</p>
+          <p class="con_content"># Checks for typedefs, structures, and compiler characteristics.</p>
+          <p class="con_content"># Checks for library functions.</p>
+          <p class="con_content">AC_OUTPUT</p>
+          <p class="con_content">------------------------------------------------</p>
+          <p class="con_content">解读以上的文件：</p>
+          <p class="con_content">------------------------------------------------</p>
+          <p class="con_content">#                                               -*- Autoconf -*-</p>
+          <p class="con_content"># Process this file with autoconf to produce a configure script.</p>
+          <p class="con_content"># AC_PREREQ:</p>
+          <p class="con_content"># 确保使用的是足够新的Autoconf版本。如果用于创建configure的Autoconf的版</p>
+          <p class="con_content"># 本比version 要早，就在标准错误输出打印一条错误消息并不会创建configure。</p>
+          <p class="con_content">AC_PREREQ(2.61)</p>
+          <p class="con_content"># 初始化,定义软件的基本信息,包括设置包的全称,版本号以及报告BUG时需要用的邮箱地址</p>
+          <p class="con_content">AC_INIT(FULL-PACKAGE-NAME, VERSION, BUG-REPORT-ADDRESS)</p>
+          <p class="con_content"># 用来侦测所指定的源码文件是否存在，来确定源码目录的有效性</p>
+          <p class="con_content">AC_CONFIG_SRCDIR([main.c])</p>
+          <p class="con_content"># 用于生成config.h文件，以便autoheader使用</p>
+          <p class="con_content">AC_CONFIG_HEADER([config.h])</p>
+          <p class="con_content"># Checks for programs.</p>
+          <p class="con_content">AC_PROG_CC</p>
+          <p class="con_content"># Checks for libraries.</p>
+          <p class="con_content"># Checks for header files.</p>
+          <p class="con_content"># Checks for typedefs, structures, and compiler characteristics.</p>
+          <p class="con_content"># Checks for library functions.</p>
+          <p class="con_content"># 创建输出文件。在`configure.in'的末尾调用本宏一次。</p>
+          <p class="con_content">AC_OUTPUT</p>
+          <p class="con_content">------------------------------------------------</p>
+          <p class="con_content">修改动作:</p>
+          <p class="con_content"> 1.修改AC_INIT里面的参数: AC_INIT(main,1.0, szgdagun@sohu.com)</p>
+          <p class="con_content"> 2.添加宏AM_INIT_AUTOMAKE, 它是automake所必备的宏，也同前面一样，PACKAGE是所要产生软件套件的名称，VERSION是版本编号。</p>
+          <p class="con_content"> 3.在AC_OUTPUT后添加输出文件Makefile</p>
+          <p class="con_content">修改后的结果:</p>
+          <p class="con_content">#                                               -*- Autoconf -*-</p>
+          <p class="con_content"># Process this file with autoconf to produce a configure script.</p>
+          <p class="con_content">AC_PREREQ(2.61)</p>
+          <p class="con_content">AC_INIT(main, 1.0, pgpxc@163.com)   //修改</p>
+          <p class="con_content">AC_CONFIG_SRCDIR([main.c])</p>
+          <p class="con_content">AC_CONFIG_HEADER([config.h])</p>
+          <p class="con_content">AM_INIT_AUTOMAKE(main,1.0)  //新增</p>
+          <p class="con_content"># Checks for programs.</p>
+          <p class="con_content">AC_PROG_CC</p>
+          <p class="con_content"># Checks for libraries.</p>
+          <p class="con_content"># Checks for header files.</p>
+          <p class="con_content"># Checks for typedefs, structures, and compiler characteristics.</p>
+          <p class="con_content"># Checks for library functions.</p>
+          <p class="con_content">AC_CONFIG_FILES([Makefile]) //如果有，就不需要增加</p>
+          <p class="con_content">AC_OUTPUT</p>
+          <p class="con_content">------------------------------------------------</p>
+          <p class="con_content">第四步:</p>
+          <p class="con_content">运行 aclocal, 生成一个“aclocal.m4”文件和一个缓冲文件夹autom4te.cache，该文件主要处理本地的宏定义。</p>
+          <p class="con_content">此时的状态是：</p>
+          <p class="con_content">[root@localhost main]# aclocal</p>
+          <p class="con_content">[root@localhost main]# ls</p>
+          <p class="con_content">aclocal.m4 autom4te.cache autoscan.log configure.in configure.in~ main.c</p>
+          <p class="con_content">[root@localhost main]#</p>
+          <p class="con_content">第五步：</p>
+          <p class="con_content">运行 autoconf, 目的是生成 configure</p>
+          <p class="con_content">此时的状态是：</p>
+          <p class="con_content">[root@localhost main]# autoconf</p>
+          <p class="con_content">[root@localhost main]# ls</p>
+          <p class="con_content">aclocal.m4      autoscan.log configure.in   main.c</p>
+          <p class="con_content">autom4te.cache configure     configure.in~</p>
+          <p class="con_content">[root@localhost main]#</p>
+          <p class="con_content">第六步：</p>
+          <p class="con_content">运行 autoheader，它负责生成config.h.in文件。该工具通常会从“acconfig.h”文件中复制用户附加的符号定义，因此此处没有附加符号定义，所以不需要创建“acconfig.h”文件。</p>
+          <p class="con_content">此时的状态是：</p>
+          <p class="con_content">[root@localhost main]# autoheader</p>
+          <p class="con_content">[root@localhost main]# ls</p>
+          <p class="con_content">aclocal.m4      autoscan.log configure     configure.in~</p>
+          <p class="con_content">autom4te.cache config.h.in   configure.in main.c</p>
+          <p class="con_content">[root@localhost main]#</p>
+          <p class="con_content">第七步：</p>
+          <p class="con_content">将运行 automake, 但在此之前应该做一下准备工作!</p>
+          <p class="con_content">首先</p>
+          <p class="con_content">创建一个 Makefile.am.这一步是创建Makefile很重要的一步，automake要用的脚本配置文件是Makefile.am，用户需要自己创建相应的文件。之后，automake工具转换成Makefile.in。</p>
+          <p class="con_content">这个Makefile.am的内容如下：</p>
+          <p class="con_content">------------------------------------------------</p>
+          <p class="con_content">AUTOMAKE_OPTIONS=foreign</p>
+          <p class="con_content">bin_PROGRAMS=main</p>
+          <p class="con_content">main_SOURCES=main.c</p>
+          <p class="con_content">------------------------------------------------</p>
+          <p class="con_content">下面对该脚本文件的对应项进行解释。</p>
+          <p class="con_content"> 其中的AUTOMAKE_OPTIONS为设置automake的选项。由于GNU（在第1章中已经有所介绍）对自己发布的软件有严格的规范，比如必须附 带许可证声明文件COPYING等，否则automake执行时会报错。automake提供了三种软件等级：foreign、gnu和gnits，让用 户选择采用，默认等级为gnu。在本例使用foreign等级，它只检测必须的文件。</p>
+          <p class="con_content">bin_PROGRAMS定义要产生的执行文件名。如果要产生多个执行文件，每个文件名用空格隔开。</p>
+          <p class="con_content"> main_SOURCES定义“main”这个执行程序所需要的原始文件。如果”main”这个程序是由多个原始文件所产生的，则必须把它所用到的所有原 始文件都列出来，并用空格隔开。例如：若目标体“main”需要“main.c”、“sunq.c”、“main.h”三个依赖文件，则定义 main_SOURCES=main.c sunq.c main.h。要注意的是，如果要定义多个执行文件，则对每个执行程序都要定义相应的file_SOURCES。</p>
+          <p class="con_content">其次</p>
+          <p class="con_content">使用automake对其生成“configure.in”文件，在这里使用选项“—adding-missing”可以让automake自动添加有一些必需的脚本文件。</p>
+          <p class="con_content">运行后的状态是：</p>
+          <p class="con_content">------------------------------------------------</p>
+          <p class="con_content">[root@localhost main]# automake --add-missing</p>
+          <p class="con_content">configure.in:8: installing `./missing'</p>
+          <p class="con_content">configure.in:8: installing `./install-sh'</p>
+          <p class="con_content">Makefile.am: installing `./depcomp'</p>
+          <p class="con_content">[root@localhost main]# ls</p>
+          <p class="con_content">aclocal.m4      config.h.in   configure.in~ main.c        Makefile.in</p>
+          <p class="con_content">autom4te.cache configure     depcomp        Makefile.am missing</p>
+          <p class="con_content">autoscan.log    configure.in install-sh     Makefile.am~</p>
+          <p class="con_content">[root@localhost main]#</p>
+          <p class="con_content">------------------------------------------------</p>
+          <p class="con_content">第八步</p>
+          <p class="con_content">运行configure，在这一步中，通过运行自动配置设置文件configure，把Makefile.in变成了最终的Makefile。</p>
+          <p class="con_content">运行的结果如下：</p>
+          <p class="con_content">------------------------------------------------</p>
+          <p class="con_content">[root@localhost main]# ./configure</p>
+          <p class="con_content">checking for a BSD-compatible install... /usr/bin/install -c</p>
+          <p class="con_content">checking whether build environment is sane... yes</p>
+          <p class="con_content">checking for a thread-safe mkdir -p... /bin/mkdir -p</p>
+          <p class="con_content">checking for gawk... gawk</p>
+          <p class="con_content">checking whether make sets $(MAKE)... yes</p>
+          <p class="con_content">checking for gcc... gcc</p>
+          <p class="con_content">checking for C compiler default output file name... a.out</p>
+          <p class="con_content">checking whether the C compiler works... yes</p>
+          <p class="con_content">checking whether we are cross compiling... no</p>
+          <p class="con_content">checking for suffix of executables...</p>
+          <p class="con_content">checking for suffix of object files... o</p>
+          <p class="con_content">checking whether we are using the GNU C compiler... yes</p>
+          <p class="con_content">checking whether gcc accepts -g... yes</p>
+          <p class="con_content">checking for gcc option to accept ISO C89... none needed</p>
+          <p class="con_content">checking for style of include used by make... GNU</p>
+          <p class="con_content">checking dependency style of gcc... gcc3</p>
+          <p class="con_content">configure: creating ./config.status</p>
+          <p class="con_content">config.status: creating Makefile</p>
+          <p class="con_content">config.status: creating config.h</p>
+          <p class="con_content">config.status: executing depfiles commands</p>
+          <p class="con_content">[root@localhost main]# ls</p>
+          <p class="con_content">aclocal.m4      config.h.in    configure.in   main.c        Makefile.in</p>
+          <p class="con_content">autom4te.cache config.log     configure.in~ Makefile      missing</p>
+          <p class="con_content">autoscan.log    config.status depcomp        Makefile.am   stamp-h1</p>
+          <p class="con_content">config.h        configure      install-sh     Makefile.am~</p>
+          <p class="con_content">[root@localhost main]#</p>
+          <p class="con_content">------------------------------------------------</p>
+          <p class="con_content">第九步</p>
+          <p class="con_content">运行 make，对配置文件Makefile进行测试一下</p>
+          <p class="con_content">此时的状态如下:</p>
+          <p class="con_content">------------------------------------------------</p>
+          <p class="con_content">[root@localhost main]# make</p>
+          <p class="con_content">cd . &amp;&amp; /bin/sh /root/project/main/missing --run aclocal-1.10</p>
+          <p class="con_content">cd . &amp;&amp; /bin/sh /root/project/main/missing --run automake-1.10 --foreign</p>
+          <p class="con_content">cd . &amp;&amp; /bin/sh /root/project/main/missing --run autoconf</p>
+          <p class="con_content">/bin/sh ./config.status --recheck</p>
+          <p class="con_content">running CONFIG_SHELL=/bin/sh /bin/sh ./configure   --no-create --no-recursion</p>
+          <p class="con_content">checking for a BSD-compatible install... /usr/bin/install -c</p>
+          <p class="con_content">checking whether build environment is sane... yes</p>
+          <p class="con_content">checking for a thread-safe mkdir -p... /bin/mkdir -p</p>
+          <p class="con_content">checking for gawk... gawk</p>
+          <p class="con_content">checking whether make sets $(MAKE)... yes</p>
+          <p class="con_content">checking for gcc... gcc</p>
+          <p class="con_content">checking for C compiler default output file name... a.out</p>
+          <p class="con_content">checking whether the C compiler works... yes</p>
+          <p class="con_content">checking whether we are cross compiling... no</p>
+          <p class="con_content">checking for suffix of executables...</p>
+          <p class="con_content">checking for suffix of object files... o</p>
+          <p class="con_content">checking whether we are using the GNU C compiler... yes</p>
+          <p class="con_content">checking whether gcc accepts -g... yes</p>
+          <p class="con_content">checking for gcc option to accept ISO C89... none needed</p>
+          <p class="con_content">checking for style of include used by make... GNU</p>
+          <p class="con_content">checking dependency style of gcc... gcc3</p>
+          <p class="con_content">configure: creating ./config.status</p>
+          <p class="con_content">/bin/sh ./config.status</p>
+          <p class="con_content">config.status: creating Makefile</p>
+          <p class="con_content">config.status: creating config.h</p>
+          <p class="con_content">config.status: config.h is unchanged</p>
+          <p class="con_content">config.status: executing depfiles commands</p>
+          <p class="con_content">cd . &amp;&amp; /bin/sh /root/project/main/missing --run autoheader</p>
+          <p class="con_content">rm -f stamp-h1</p>
+          <p class="con_content">touch config.h.in</p>
+          <p class="con_content">make all-am</p>
+          <p class="con_content">make[1]: Entering directory `/root/project/main'</p>
+          <p class="con_content">gcc -DHAVE_CONFIG_H -I.     -g -O2 -MT main.o -MD -MP -MF .deps/main.Tpo -c -o main.o main.c</p>
+          <p class="con_content">mv -f .deps/main.Tpo .deps/main.Po</p>
+          <p class="con_content">gcc -g -O2   -o main main.o</p>
+          <p class="con_content">cd . &amp;&amp; /bin/sh ./config.status config.h</p>
+          <p class="con_content">config.status: creating config.h</p>
+          <p class="con_content">config.status: config.h is unchanged</p>
+          <p class="con_content">make[1]: Leaving directory `/root/project/main'</p>
+          <p class="con_content">[root@localhost main]# ls</p>
+          <p class="con_content">aclocal.m4      autoscan.log config.h.in config.status configure.in   depcomp     main    main.o    Makefile.am   Makefile.in stamp-h1</p>
+          <p class="con_content">autom4te.cache config.h      config.log   configure      configure.in~ install-sh main.c Makefile Makefile.am~ missing</p>
+          <p class="con_content">[root@localhost main]#</p>
+          <p class="con_content">------------------------------------------------</p>
+          <p class="con_content">第十步</p>
+          <p class="con_content">运行生成的文件 main：</p>
+          <p class="con_content">------------------------------------------------</p>
+          <p class="con_content">[root@localhost main]# ./main</p>
+          <p class="con_content">Hello, Auto Makefile!</p>
+          <h4>&nbsp;</h4>
+          <h4><br>
+          </h4>
+          <h4></h4>
+          <h4><br>
+          </h4>
+          <h4>&nbsp;</h4>
+           <h4 align="right"> 评论及排版完善尚在进行中，能力有限，请见谅！ ---------2019年10月21日</h4>
+        </div>
+           <div class="nextinfos">
+      <p>上一篇：<a href="4.html">Linux shell编程入门</a></p>
+      <p>下一篇：<a href="6.html">有惊喜</a></p>
+    </div> 
+        
+        
+     
+      </div>
+    </div>
+    <div class="blank"></div>
+  </div>
+  <!-- container代码 结束 -->
+  
+  <footer>
+    <div class="footer">
+      <div class="f_l">
+        <p>All Rights Reserved 版权所有：<a href="http://rjxj513.xyz">一蓑烟雨个人博客</a> 备案号：京ICP备00000000号</p>
+      </div>
+      <div class="f_r textr">
+        <p>Design by DanceSmile</p>
+      </div>
+    </div>
+  </footer>
+</div>
+</body>
+</html>

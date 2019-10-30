@@ -1,0 +1,224 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="gb2312">
+<title>一蓑烟雨个人博客</title>
+<meta name="keywords" content="一蓑烟雨个人博客" />
+<meta name="description" content="一蓑烟雨个人博客" />
+<link href="../css/base.css" rel="stylesheet">
+<link href="../css/main.css" rel="stylesheet">
+<link href="../css/m.css" rel="stylesheet">
+<!--[if lt IE 9]>
+<script src="js/modernizr.js"></script>
+<![endif]-->
+<script type="text/javascript" src="js/jquery.js"></script>
+</head>
+<body>
+<script>
+window.onload = function ()
+{
+	var oH2 = document.getElementsByTagName("h2")[0];
+	var oUl = document.getElementsByTagName("ul")[0];
+	oH2.onclick = function ()
+	{
+		var style = oUl.style;
+		style.display = style.display == "block" ? "none" : "block";
+		oH2.className = style.display == "block" ? "open" : ""
+	}
+}
+</script>
+<div id="wrapper">
+  <header>
+    <div class="headtop"></div>
+    <div class="contenttop">
+      <div class="logo f_l">一蓑烟雨个人博客</div>
+      <div class="search f_r">
+        <form action="/e/search/index.php" method="post" name="searchform" id="searchform">
+          <input name="keyboard" id="keyboard" class="input_text" value="请输入关键字" style="color: rgb(153, 153, 153);" onfocus="if(value=='请输入关键字'){this.style.color='#000';value=''}" onblur="if(value==''){this.style.color='#999';value='请输入关键字'}" type="text">
+          <input name="show" value="title" type="hidden">
+          <input name="tempid" value="1" type="hidden">
+          <input name="tbname" value="news" type="hidden">
+          <input name="Submit" class="input_submit" value="搜索" type="submit">
+        </form>
+      </div>
+      <div class="blank"></div>
+      
+      <div id="mnav">
+    <h2><span class="navicon"></span></h2>
+    <ul>
+      <li><a href="../">网站首页</a></li>
+      <li><a href="../about.html">关于我</a></li>
+      <li><a href="../download/">模板分享</a>
+         <ul>
+         <li><a href="#.html">关于我</a></li>
+         <li><a href="#.html">关于我</a></li>
+         <li><a href="#.html">关于我</a></li>
+          </ul>
+        </li>
+      <li><a href="/jstt/">学无止境</a>
+            <ul>
+         <li><a href="#.html">关于我</a></li>
+         <li><a href="#.html">关于我</a></li>
+         <li><a href="#.html">关于我</a></li>
+          </ul></li>
+      <li><a href="/news/">慢生活</a>
+            <ul>
+         <li><a href="#.html">关于我</a></li>
+         <li><a href="#.html">关于我</a></li>
+         <li><a href="#.html">关于我</a></li>
+          </ul></li>
+      <li><a href="/e/tool/gbook/?bid=3">留言</a></li>
+    </ul>
+  </div>
+      
+      <nav>
+        <div  class="navigation">
+          <ul class="menu">
+            <li><a href="../index.html">网站首页</a></li>
+            <li><a href="#">关于我</a>
+              <ul>
+                <li><a href="../about.html">个人简介</a></li>
+                <li><a href="../listpic.html">个人相册</a></li>
+              </ul>
+            </li>
+            <li><a href="#">我的日记</a>
+              <ul>
+                <li><a href="../newslistpic.html">个人日记</a></li>
+                <li><a href="../newslistpic.html">学习笔记</a></li>
+              </ul>
+            </li>
+            <li><a href="../newslistpic.html">技术文章</a> </li>
+            <li><a href="#">给我留言</a> </li>
+          </ul>
+        </div>
+      </nav>
+      <SCRIPT type=text/javascript>
+	// Navigation Menu
+	$(function() {
+		$(".menu ul").css({display: "none"}); // Opera Fix
+		$(".menu li").hover(function(){
+			$(this).find('ul:first').css({visibility: "visible",display: "none"}).slideDown("normal");
+		},function(){
+			$(this).find('ul:first').css({visibility: "hidden"});
+		});
+	});
+</SCRIPT> 
+    </div>
+  </header>
+  <div class="container">
+    <div class="con_content">
+      <div class="about_box">
+      <div class="aboutme">
+      <h2 class="ab_title">关于我</h2>
+      <div class="avatar"> <img src="../../images/b04.jpg"> </div>
+      <div class="ab_con">
+        <p>网名：一蓑烟雨</p>
+        <p>职业：学生 </p>
+        <p>籍贯：江苏徐州</p>
+        <p>邮箱：1614667641@qq.com</p>
+      </div>
+    </div>
+    <div class="weixin">
+      <h2 class="ab_title">微信关注</h2>
+      <ul>
+        <img src="../../images/wx.jpg">
+      </ul>
+    </div>
+  </div>
+        <h2 class="nh1"><span>您现在的位置是：<a href="../" target="_blank">网站首页</a>>><a href="../post/3.html" target="_blank">下一篇</a></span><b></b></h2>
+        <div class="f_box">
+          <p class="a_title">gcc编译之--动态静态</p>
+          <p class="p_title"></p>
+          <!--  <p class="box_p"><span>发布时间：2017-07-07 15:12:42</span><span>作者：唐孝文</span><span>来源：稽查支队</span><span>点击：111056</span></p>--> 
+          <!-- 可用于内容模板 --> 
+          <p>&nbsp; </p>
+          <p>&nbsp;</p>
+          <h4><span class="a_title">编译的步骤</span>：<br>
+            1.预处理 ： 处理所有以#开头的代码  头文件（展开）  宏定义（替换） 条件编译<br>
+gcc -E hello.c -o hello.i<br>
+2.编译 ：把C代码转换成汇编代码 同时要进行语法检查<br>
+gcc -S hello.i -o hello.s<br>
+3.汇编： 把汇编代码转换成二进制<br>
+gcc -c hello.s -o hello.o<br>
+4.链接 ：链接代码需要用到的库文件以及其他文件<br>
+gcc hello.o  -o  hello</h4>
+          <h4>文件编译过程<br>
+            <span class="blogs">[root@jsetc 10.17]# gcc -E hello.c -o hello.i<br>
+            [root@jsetc 10.17]# gcc -S hello.i -o hello.s<br>
+            [root@jsetc 10.17]# gcc -c hello.s -o hello.o<br>
+            [root@jsetc 10.17]# gcc hello.o -o hello<br>
+            [root@jsetc 10.17]# ./hello<br>
+            helloworld!</span></h4>
+          <h4><span class="a_title">制作静态库</span><br>
+            1.编写hello.c 	f1.c 	f2.c<br>
+            vim hello.c    f1.c      f2.c<br>
+            2.把f1.c   f2.c 汇编处理，变成二进制文件<br>
+            gcc -c f1.c f2.c<br>
+            3.把二进制文件做成静态库<br>
+            ar -crv libmy.a f1.o f2.o<br>
+            4.编译hello.c文件<br>
+            gcc hello.c -o hello -static -L . -l my<br>
+          </h4>
+          <h4>制作静态库<br>
+            <span class="blogs"><br>
+            [root@jsetc lib]# gcc hello.c f1.c f2.c -o hello<br>
+            [root@jsetc lib]# ls<br>
+            f1.c  f2.c  hello  hello.c<br>
+            [root@jsetc lib]# gcc -c f1.c f2.c<br>
+            [root@jsetc lib]# ar -crv libmy.a f1.o f2.o<br>
+            a - f1.o<br>
+            a - f2.o<br>
+            [root@jsetc lib]# gcc hello.c -o hello -static -L . -l my<br>
+            [root@jsetc lib]# ls<br>
+            1.c  2.c  f1.o  f2.o  hello  hello.c  libmy.a<br>
+            [root@jsetc lib]# file 1.c<br>
+            1.c: ASCII C program text<br>
+            [root@jsetc lib]# file f1.o<br>
+            f1.o: ELF 32-bit LSB relocatable, Intel 80386, version 1 (SYSV), not stripped</span><br>
+          </h4>
+          <h4><span class="a_title">制作动态库</span><br>
+            1.  gcc -fPIC -shared f1.c f2.c -o libmy.so<br>
+            2.编译源文件<br>
+            gcc hello.c -o hello -L . -l my<br>
+            3.运行可执行文件的时候会默认去/usr/lib/目录下找libxxx.so文件，所以需要把库文件拷到该目录下<br>
+            cp libmy.so /usr/lib<br>
+          </h4>
+          <h4>制作动态库<br>
+            <span class="blogs">root@jsetc lib]# gcc -fPIC -shared f1.c f2.c -o libmy.so<br>
+            [root@jsetc lib]# gcc hello.c -o hello -L . -l my<br>
+            [root@jsetc lib]# cp libmy.so /usr/lib<br>
+            [root@jsetc lib]# ./hello<br>
+            this is f1..<br>
+            this is f2..</span></h4>
+          <h4></h4>
+          <h4><br>
+          </h4>
+          <h4>&nbsp;</h4>
+           <h4 align="right"> 评论及排版完善尚在进行中，能力有限，请见谅！ ---------2019年10月17日</h4>
+        </div>
+        <!--    <div class="nextinfos">
+      <p>上一篇：<a href="/">区中医医院开展志愿服务活动</a></p>
+      <p>下一篇：<a href="/">广安区批准“单独两孩”500例</a></p>
+    </div>--> 
+        <!-- 可用于内容模板 --> 
+        
+        <!-- container代码 结束 --> 
+      </div>
+    </div>
+    <div class="blank"></div>
+  </div>
+  <!-- container代码 结束 -->
+  
+  <footer>
+    <div class="footer">
+      <div class="f_l">
+        <p>All Rights Reserved 版权所有：<a href="http://rjxj513.xyz">一蓑烟雨个人博客</a> 备案号：京ICP备00000000号</p>
+      </div>
+      <div class="f_r textr">
+        <p>Design by DanceSmile</p>
+      </div>
+    </div>
+  </footer>
+</div>
+</body>
+</html>

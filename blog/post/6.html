@@ -1,0 +1,226 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>一蓑烟雨个人博客</title>
+<meta name="keywords" content="一蓑烟雨个人博客" />
+<meta name="description" content="一蓑烟雨个人博客" />
+<link href="../css/base.css" rel="stylesheet">
+<link href="../css/main.css" rel="stylesheet">
+<link href="../css/m.css" rel="stylesheet">
+<!--[if lt IE 9]>
+<script src="js/modernizr.js"></script>
+<![endif]-->
+<script type="text/javascript" src="js/jquery.js"></script>
+</head>
+<body>
+<script>
+window.onload = function ()
+{
+	var oH2 = document.getElementsByTagName("h2")[0];
+	var oUl = document.getElementsByTagName("ul")[0];
+	oH2.onclick = function ()
+	{
+		var style = oUl.style;
+		style.display = style.display == "block" ? "none" : "block";
+		oH2.className = style.display == "block" ? "open" : ""
+	}
+}
+</script>
+<div id="wrapper">
+  <header>
+    <div class="headtop"></div>
+    <div class="contenttop">
+      <div class="logo f_l">一蓑烟雨个人博客</div>
+      <div class="search f_r">
+        <form action="/e/search/index.php" method="post" name="searchform" id="searchform">
+          <input name="keyboard" id="keyboard" class="input_text" value="请输入关键字" style="color: rgb(153, 153, 153);" onfocus="if(value=='请输入关键字'){this.style.color='#000';value=''}" onblur="if(value==''){this.style.color='#999';value='请输入关键字'}" type="text">
+          <input name="show" value="title" type="hidden">
+          <input name="tempid" value="1" type="hidden">
+          <input name="tbname" value="news" type="hidden">
+          <input name="Submit" class="input_submit" value="搜索" type="submit">
+        </form>
+      </div>
+      <div class="blank"></div>
+      
+      <div id="mnav">
+    <h2><span class="navicon"></span></h2>
+    <ul>
+      <li><a href="../">网站首页</a></li>
+      <li><a href="../about.html">关于我</a></li>
+      <li><a href="../download/">模板分享</a>
+         <ul>
+         <li><a href="#.html">关于我</a></li>
+         <li><a href="#.html">关于我</a></li>
+         <li><a href="#.html">关于我</a></li>
+          </ul>
+        </li>
+      <li><a href="/jstt/">学无止境</a>
+            <ul>
+         <li><a href="#.html">关于我</a></li>
+         <li><a href="#.html">关于我</a></li>
+         <li><a href="#.html">关于我</a></li>
+          </ul></li>
+      <li><a href="/news/">慢生活</a>
+            <ul>
+         <li><a href="#.html">关于我</a></li>
+         <li><a href="#.html">关于我</a></li>
+         <li><a href="#.html">关于我</a></li>
+          </ul></li>
+      <li><a href="/e/tool/gbook/?bid=3">留言</a></li>
+    </ul>
+  </div>
+      
+      <nav>
+        <div  class="navigation">
+          <ul class="menu">
+            <li><a href="../index.html">网站首页</a></li>
+            <li><a href="#">关于我</a>
+              <ul>
+                <li><a href="../about.html">个人简介</a></li>
+                <li><a href="../listpic.html">个人相册</a></li>
+              </ul>
+            </li>
+            <li><a href="#">我的日记</a>
+              <ul>
+                <li><a href="../newslistpic.html">个人日记</a></li>
+                <li><a href="../newslistpic.html">学习笔记</a></li>
+              </ul>
+            </li>
+            <li><a href="../newslistpic.html">技术文章</a> </li>
+            <li><a href="#">给我留言</a> </li>
+          </ul>
+        </div>
+      </nav>
+      <SCRIPT type=text/javascript>
+	// Navigation Menu
+	$(function() {
+		$(".menu ul").css({display: "none"}); // Opera Fix
+		$(".menu li").hover(function(){
+			$(this).find('ul:first').css({visibility: "visible",display: "none"}).slideDown("normal");
+		},function(){
+			$(this).find('ul:first').css({visibility: "hidden"});
+		});
+	});
+</SCRIPT> 
+    </div>
+  </header>
+  <div class="container">
+    <div class="con_content">
+      <div class="about_box">
+        <h2 class="nh1"><span>您现在的位置是：<a href="../" target="_blank">网站首页</a>>><a href="../post/3.html" target="_blank">下一篇</a></span><b></b></h2>
+        <div class="f_box">
+          <p class="a_title">一维数组与二维数组初学</p>
+          <p class="p_title"></p>
+         
+          <p>  这里直接通过代码来解释：</p>
+          <p>&nbsp;</p>
+          <p>[root@jsetc lesson2]# cat 1-一维数组.c<br>
+            #include &lt;stdio.h&gt;</p>
+          <p>int g;   //未初始化的全局变量是0</p>
+          <p>int main()<br>
+            {<br>
+            int k;     //未初始化的局部变量是随机值<br>
+            printf(&quot;%d\n&quot;, k);<br>
+          printf(&quot;%d\n&quot;, g);</p>
+          <p> //int a[k] = {0};<em> //错误</em><br>
+            //int a[5] = {1, 2, 3, 4, 5};<br>
+            //int a[5];<br>
+            //int a[5] = {1, 2};<br>
+            //int a[] = {1, 2, 3, 4, 5, 6, 7};<br>
+            int a[5] = {0};</p>
+          <p> for (k = 0; k &lt; sizeof(a) / sizeof(a[0]); k++)//建议这样循环<br>
+            {<br>
+            printf(&quot;%d &quot;, a[k]);<br>
+            }<br>
+          printf(&quot;\n&quot;);</p>
+          <p> printf(&quot;%p\n&quot;, &amp;a[0]);<br>
+            printf(&quot;%p\n&quot;, a);   //数组名 数组首元素地址<br>
+          printf(&quot;%p\n&quot;, &amp;a);  //&amp;a是数组的地址</p>
+          <p> printf(&quot;%p\n&quot;, &amp;a[0] + 1);<br>
+            printf(&quot;%p\n&quot;, a + 1);<br>
+          printf(&quot;%p\n&quot;, &amp;a + 1);</p>
+          <p> return 0;<br>
+            }<br>
+            [root@jsetc lesson2]# cat 2-二维数组.c<br>
+          #include &lt;stdio.h&gt;</p>
+          <p>int main()<br>
+            { <br>
+            //int a[3][4] = {{1, 2, 3, 4}, {2, 3, 4, 5}, {3, 4, 5, 6}};<br>
+            //int a[3][4] = {{1, 2}, {2}, {3, 4, 5}};<br>
+            //int a[][4] = {{1, 2, 3, 4}, {2, 3, 4, 5}, {3, 4, 5, 6}};<br>
+            int a[3][4] = {{0}};</p>
+          <p> int i, j;<br>
+            for (i = 0; i &lt; 3; i++)<br>
+            {<br>
+            for (j = 0; j &lt; 4; j++)<br>
+            {<br>
+            printf(&quot;%d &quot;, a[i][j]);<br>
+            }<br>
+            printf(&quot;\n&quot;);<br>
+            }</p>
+          <p> printf(&quot;%p\n&quot;, &amp;a[0][0]);<br>
+            printf(&quot;%p\n&quot;, a[0]);           //首行首元素地址<br>
+            printf(&quot;%p\n&quot;, a[1]);<br>
+            printf(&quot;%p\n&quot;, *(a + 1));       //a[1] ===== *(a + 1)   []等价于*()<br>
+            printf(&quot;%p\n&quot;, a);              //数组首行地址<br>
+          printf(&quot;%p\n&quot;, &amp;a);             //数组的地址</p>
+          <p> printf(&quot;%p\n&quot;, &amp;a[0][0] + 1);<br>
+            printf(&quot;%p\n&quot;, a[0] + 1);<br>
+            printf(&quot;%p\n&quot;, a[1] + 1);<br>
+            printf(&quot;%p\n&quot;, a + 1);<br>
+          printf(&quot;%p\n&quot;, &amp;a + 1);</p>
+          <p> return 0;<br>
+            }<br>
+          </p>
+          <p>[chen@jsetc lesson2]$ ./1-一维数组<br>
+            1401792<br>
+            0<br>
+            0 0 0 0 0 <br>
+            0xbf93fabc<br>
+            0xbf93fabc<br>
+            0xbf93fabc<br>
+            0xbf93fac0<br>
+            0xbf93fac0<br>
+            0xbf93fad0<br>
+            [chen@jsetc lesson2]$ ./2-二维数组<br>
+            0 0 0 0 <br>
+            0 0 0 0 <br>
+            0 0 0 0 <br>
+            0xbff4e8a8<br>
+            0xbff4e8a8<br>
+            0xbff4e8b8<br>
+            0xbff4e8b8<br>
+            0xbff4e8a8<br>
+            0xbff4e8a8<br>
+            0xbff4e8ac<br>
+          </p>
+          <h4>&nbsp;</h4>
+           <h4 align="right"> 评论及排版完善尚在进行中，能力有限，请见谅！ ---------2019年10月28日</h4>
+        </div>
+           <div class="nextinfos">
+      <p>上一篇：<a href="5.html">Makefile</a></p>
+      <p>下一篇：<a href="7.html">有惊喜</a></p>
+    </div> 
+        
+        
+     
+      </div>
+    </div>
+    <div class="blank"></div>
+  </div>
+  <!-- container代码 结束 -->
+  
+  <footer>
+    <div class="footer">
+      <div class="f_l">
+        <p>All Rights Reserved 版权所有：<a href="http://rjxj513.xyz">一蓑烟雨个人博客</a> 备案号：京ICP备00000000号</p>
+      </div>
+      <div class="f_r textr">
+        <p>Design by DanceSmile</p>
+      </div>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
