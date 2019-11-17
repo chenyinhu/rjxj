@@ -1,0 +1,340 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>一蓑烟雨个人博客</title>
+<meta name="keywords" content="一蓑烟雨个人博客" />
+<meta name="description" content="一蓑烟雨个人博客" />
+<link href="../css/base.css" rel="stylesheet">
+<link href="../css/main.css" rel="stylesheet">
+<link href="../css/m.css" rel="stylesheet">
+<!--[if lt IE 9]>
+<script src="js/modernizr.js"></script>
+<![endif]-->
+<script type="text/javascript" src="js/jquery.js"></script>
+</head>
+<body>
+<script>
+window.onload = function ()
+{
+	var oH2 = document.getElementsByTagName("h2")[0];
+	var oUl = document.getElementsByTagName("ul")[0];
+	oH2.onclick = function ()
+	{
+		var style = oUl.style;
+		style.display = style.display == "block" ? "none" : "block";
+		oH2.className = style.display == "block" ? "open" : ""
+	}
+}
+</script>
+<div id="wrapper">
+  <header>
+    <div class="headtop"></div>
+    <div class="contenttop">
+      <div class="logo f_l">一蓑烟雨个人博客</div>
+      <div class="search f_r">
+        <form action="/e/search/index.php" method="post" name="searchform" id="searchform">
+          <input name="keyboard" id="keyboard" class="input_text" value="请输入关键字" style="color: rgb(153, 153, 153);" onfocus="if(value=='请输入关键字'){this.style.color='#000';value=''}" onblur="if(value==''){this.style.color='#999';value='请输入关键字'}" type="text">
+          <input name="show" value="title" type="hidden">
+          <input name="tempid" value="1" type="hidden">
+          <input name="tbname" value="news" type="hidden">
+          <input name="Submit" class="input_submit" value="搜索" type="submit">
+        </form>
+      </div>
+      <div class="blank"></div>
+      
+      <div id="mnav">
+    <h2><span class="navicon"></span></h2>
+    <ul>
+      <li><a href="../">网站首页</a></li>
+      <li><a href="../about.html">关于我</a></li>
+      <li><a href="../download/">模板分享</a>
+         <ul>
+         <li><a href="#.html">关于我</a></li>
+         <li><a href="#.html">关于我</a></li>
+         <li><a href="#.html">关于我</a></li>
+          </ul>
+        </li>
+      <li><a href="/jstt/">学无止境</a>
+            <ul>
+         <li><a href="#.html">关于我</a></li>
+         <li><a href="#.html">关于我</a></li>
+         <li><a href="#.html">关于我</a></li>
+          </ul></li>
+      <li><a href="/news/">慢生活</a>
+            <ul>
+         <li><a href="#.html">关于我</a></li>
+         <li><a href="#.html">关于我</a></li>
+         <li><a href="#.html">关于我</a></li>
+          </ul></li>
+      <li><a href="/e/tool/gbook/?bid=3">留言</a></li>
+    </ul>
+  </div>
+      
+      <nav>
+        <div  class="navigation">
+          <ul class="menu">
+            <li><a href="../index.html">网站首页</a></li>
+            <li><a href="#">关于我</a>
+              <ul>
+                <li><a href="../about.html">个人简介</a></li>
+                <li><a href="../listpic.html">个人相册</a></li>
+              </ul>
+            </li>
+            <li><a href="#">我的日记</a>
+              <ul>
+                <li><a href="../newslistpic.html">个人日记</a></li>
+                <li><a href="../newslistpic.html">学习笔记</a></li>
+              </ul>
+            </li>
+            <li><a href="../newslistpic.html">技术文章</a> </li>
+            <li><a href="#">给我留言</a> </li>
+          </ul>
+        </div>
+      </nav>
+      <SCRIPT type=text/javascript>
+	// Navigation Menu
+	$(function() {
+		$(".menu ul").css({display: "none"}); // Opera Fix
+		$(".menu li").hover(function(){
+			$(this).find('ul:first').css({visibility: "visible",display: "none"}).slideDown("normal");
+		},function(){
+			$(this).find('ul:first').css({visibility: "hidden"});
+		});
+	});
+</SCRIPT> 
+    </div>
+  </header>
+  <div class="container">
+    <div class="con_content">
+      <div class="about_box">
+        <h2 class="nh1"><span>您现在的位置是：<a href="../" target="_blank">网站首页</a>>><a href="../post/3.html" target="_blank">下一篇</a></span><b></b></h2>
+        <div class="f_box">
+          <p class="a_title">C语言 lesson4</p>
+          <p class="p_title"></p>
+          <!--  <p class="box_p"><span>发布时间：2017-07-07 15:12:42</span><span>作者：唐孝文</span><span>来源：稽查支队</span><span>点击：111056</span></p>--> 
+          <!-- 可用于内容模板 --> 
+          <p>&nbsp; </p>
+          <p>[root@jsetc lesson4]# cat 1-函数指针.c<br>
+            #include &lt;stdio.h&gt;
+          <p>typedef unsigned char ucahr;<br>
+            typedef int (*T)(int, int);    //定义函数指针类型</p>
+          <p>void f1()<br>
+            {<br>
+            printf(&quot;xxx\n&quot;);<br>
+            }</p>
+          <p>int f2(int a, int b)<br>
+            {<br>
+            return 1;<br>
+            }</p>
+          <p>int main()<br>
+            {<br>
+            void (*p1)();    //定义函数指针<br>
+            p1 = f1;<br>
+            p1();           //调用函数f1()</p>
+          <p> //p1 = f2;        //类型不兼容<br>
+            int (*p2)(int, int);<br>
+            p2 = f2;<br>
+            p2(1, 2);</p>
+          <p> T p3;    //函数指针<br>
+            p3 = f2;<br>
+            p3(1, 2);</p>
+          <p> //p3 = f1;   //类型不兼容<br>
+            return 0;<br>
+            }<br>
+            [root@jsetc lesson4]# cat 2-冒泡排序.c<br>
+            #include &lt;stdio.h&gt;</p>
+          <p>void get_array(int a[], int length)<br>
+            {<br>
+            int i;<br>
+            //int size = sizeof(a) / sizeof(a[0]);   //在调用的函数里面不能求数组长度<br>
+            printf(&quot;shuru 5 ge shu\n&quot;);<br>
+            for(i = 0; i &lt; length; i++)<br>
+            {<br>
+            scanf(&quot;%d&quot;, &amp;a[i]);<br>
+            }<br>
+            }</p>
+          <p>int less(int a, int b)<br>
+            {<br>
+            return (a &gt; b) ? 1 : 0;<br>
+            }</p>
+          <p>int greater(int a, int b)<br>
+            {<br>
+            return (a &lt; b) ? 1 : 0;<br>
+            }</p>
+          <p>void sort(int a[], int length, int (*p)(int, int))  //回调函数 把函数名作为函数的参数，可以修改函数的功能<br>
+            {<br>
+            int i, j;<br>
+            for(i = 0; i &lt; length - 1; i++)<br>
+            {<br>
+            for (j = 0; j &lt; length - i - 1; j++)<br>
+            {<br>
+            //if (a[j] &lt; a[j + 1])<br>
+            if (p(a[j], a[j + 1]))<br>
+            {<br>
+            #if 0<br>
+            int tmp = a[j];<br>
+            a[j] = a[j + 1];<br>
+            a[j + 1] = tmp;<br>
+            #endif<br>
+            a[j] = a[j] + a[j + 1];<br>
+            a[j + 1] = a[j] - a[j + 1];<br>
+            a[j] = a[j] - a[j + 1];<br>
+            }<br>
+            }<br>
+            }<br>
+  <br>
+            }</p>
+          <p>void print_array(int a[], int length)<br>
+            {<br>
+            int i;<br>
+            for (i = 0; i &lt; length; i++)<br>
+            {<br>
+            printf(&quot;%d &quot;, a[i]);<br>
+            }<br>
+            printf(&quot;\n&quot;);<br>
+  <br>
+            }</p>
+          <p>int main()<br>
+            {<br>
+            int i, j, a[5] = {0};</p>
+          <p> get_array(a, sizeof(a) / sizeof(a[0]));</p>
+          <p> sort(a, sizeof(a) / sizeof(a[0]), greater);</p>
+          <p> print_array(a, sizeof(a) / sizeof(a[0]));<br>
+          </p>
+          <p> return 0;<br>
+            }<br>
+            [root@jsetc lesson4]# cat 3-指针的指针.c<br>
+            #include &lt;stdio.h&gt;<br>
+            #include &lt;stdlib.h&gt;<br>
+            #include &lt;string.h&gt;</p>
+          <p>void Init(char **s)<br>
+            {<br>
+            *s = (char *)malloc(sizeof(char) * 128);<br>
+            }</p>
+          <p>int main()<br>
+            {<br>
+            char *str = NULL; </p>
+          <p> Init(&amp;str);   //修改实参的值，需要地址传递<br>
+            strcpy(str, &quot;helloworld&quot;);<br>
+            printf(&quot;%s\n&quot;, str);</p>
+          <p> return 0;<br>
+            }<br>
+            [root@jsetc lesson4]# cat 4-数组指针.c<br>
+            #include &lt;stdio.h&gt;</p>
+          <p>int main()<br>
+            {<br>
+            int a[2][3] = {{1, 2, 3}, {4, 5, 6}};</p>
+          <p> int i, j;<br>
+            for (i = 0; i &lt; 2; i++)<br>
+            {<br>
+            for (j = 0; j &lt; 3; j++)<br>
+            {<br>
+            printf(&quot;%d &quot;, a[i][j]);<br>
+            }<br>
+            printf(&quot;\n&quot;);<br>
+            }</p>
+          <p> //用数组指针来表示二维数组<br>
+            int (*p1)[3] = a;<br>
+            for (i = 0; i &lt; 2; i++)<br>
+            {<br>
+            for (j = 0; j &lt; 3; j++)<br>
+            {<br>
+            printf(&quot;%d &quot;, (*(p1 + i))[j]);<br>
+            }<br>
+            printf(&quot;\n&quot;);<br>
+            }</p>
+          <p> //用指针数组来表示二维数组<br>
+            int *p2[2] = {a[0], a[1]};<br>
+            for (i = 0; i &lt; sizeof(p2) / sizeof(p2[0]); i++)<br>
+            {<br>
+            for (j = 0; j &lt; sizeof(a[0]) / sizeof(a[0][0]); j++)<br>
+            {<br>
+            printf(&quot;%d &quot;, p2[i][j]);<br>
+            }<br>
+            printf(&quot;\n&quot;);<br>
+            }</p>
+          <p> //用指针表示二维数组<br>
+            int *p3 = a[0];<br>
+            for (i = 0; i &lt; 6; i++)<br>
+            {<br>
+            printf(&quot;%d &quot;, p3[i]);<br>
+            }<br>
+            printf(&quot;\n&quot;);</p>
+          <p> //用指针的指针表示二维数组<br>
+            //int **p4 = a;<br>
+            //&amp;a[0]   a &amp;a</p>
+          <p> return 0;<br>
+            }<br>
+            [root@jsetc lesson4]# cat 5-命令行参数.c<br>
+            #include &lt;stdio.h&gt;</p>
+          <p>int main(int argc, char *argv[])<br>
+            {<br>
+            int i;<br>
+            for (i = 1; i &lt; argc; i++)<br>
+            {<br>
+            printf(&quot;%s\n&quot;, argv[i]);<br>
+            }</p>
+          <p> return 0;<br>
+            }<br>
+            [root@jsetc lesson4]# cat 8-字符串排序.c<br>
+            #include &lt;stdio.h&gt;<br>
+            #include &lt;stdlib.h&gt;</p>
+          <p>void sort(char *s[], int size)<br>
+            {<br>
+            int i, j;</p>
+          <p> for (i = 0; i &lt; size - 1; i++)<br>
+            {<br>
+            for (j = 0; j &lt; size - i - 1; j++)<br>
+            {<br>
+            if (strcmp(s[j], s[j + 1]) &gt; 0)<br>
+            {<br>
+            char *t = s[j];<br>
+            s[j] = s[j + 1];<br>
+            s[j + 1] = t;<br>
+            }<br>
+            }<br>
+            }<br>
+            }</p>
+          <p>int main(int argc, char *argv[])<br>
+            {<br>
+            int i;</p>
+          <p> sort(argv + 1, argc - 1);</p>
+          <p> for (i = 1; i &lt; argc; i++)<br>
+            {<br>
+            printf(&quot;%s &quot;, argv[i]);<br>
+            }<br>
+            printf(&quot;\n&quot;);</p>
+          <p> return 0;<br>
+            }</p>
+          <p><br>
+          
+          <h4>&nbsp;</h4>
+           <h4 align="right"> 评论及排版完善尚在进行中，能力有限，请见谅！ ---------2019年11月14日</h4>
+        </div>
+           <div class="nextinfos">
+      <p>上一篇：<a href="4.html">Linux shell编程入门</a></p>
+      <p>下一篇：<a href="6.html">有惊喜</a></p>
+    </div> 
+        
+        
+     
+      </div>
+    </div>
+    <div class="blank"></div>
+  </div>
+  <!-- container代码 结束 -->
+  
+  <footer>
+    <div class="footer">
+      <div class="f_l">
+        <p>All Rights Reserved 版权所有：<a href="http://rjxj513.xyz">一蓑烟雨个人博客</a> 备案号：京ICP备00000000号</p>
+      </div>
+      <div class="f_r textr">
+        <p>Design by DanceSmile</p>
+      </div>
+    </div>
+  </footer>
+</div>
+</body>
+</html>

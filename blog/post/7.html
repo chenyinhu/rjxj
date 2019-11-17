@@ -1,0 +1,449 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>一蓑烟雨个人博客</title>
+<meta name="keywords" content="一蓑烟雨个人博客" />
+<meta name="description" content="一蓑烟雨个人博客" />
+<link href="../css/base.css" rel="stylesheet">
+<link href="../css/main.css" rel="stylesheet">
+<link href="../css/m.css" rel="stylesheet">
+<!--[if lt IE 9]>
+<script src="js/modernizr.js"></script>
+<![endif]-->
+<script type="text/javascript" src="js/jquery.js"></script>
+</head>
+<body>
+<script>
+window.onload = function ()
+{
+	var oH2 = document.getElementsByTagName("h2")[0];
+	var oUl = document.getElementsByTagName("ul")[0];
+	oH2.onclick = function ()
+	{
+		var style = oUl.style;
+		style.display = style.display == "block" ? "none" : "block";
+		oH2.className = style.display == "block" ? "open" : ""
+	}
+}
+</script>
+<div id="wrapper">
+  <header>
+    <div class="headtop"></div>
+    <div class="contenttop">
+      <div class="logo f_l">一蓑烟雨个人博客</div>
+      <div class="search f_r">
+        <form action="/e/search/index.php" method="post" name="searchform" id="searchform">
+          <input name="keyboard" id="keyboard" class="input_text" value="请输入关键字" style="color: rgb(153, 153, 153);" onfocus="if(value=='请输入关键字'){this.style.color='#000';value=''}" onblur="if(value==''){this.style.color='#999';value='请输入关键字'}" type="text">
+          <input name="show" value="title" type="hidden">
+          <input name="tempid" value="1" type="hidden">
+          <input name="tbname" value="news" type="hidden">
+          <input name="Submit" class="input_submit" value="搜索" type="submit">
+        </form>
+      </div>
+      <div class="blank"></div>
+      
+      <div id="mnav">
+    <h2><span class="navicon"></span></h2>
+    <ul>
+      <li><a href="../">网站首页</a></li>
+      <li><a href="../about.html">关于我</a></li>
+      <li><a href="../download/">模板分享</a>
+         <ul>
+         <li><a href="#.html">关于我</a></li>
+         <li><a href="#.html">关于我</a></li>
+         <li><a href="#.html">关于我</a></li>
+          </ul>
+        </li>
+      <li><a href="/jstt/">学无止境</a>
+            <ul>
+         <li><a href="#.html">关于我</a></li>
+         <li><a href="#.html">关于我</a></li>
+         <li><a href="#.html">关于我</a></li>
+          </ul></li>
+      <li><a href="/news/">慢生活</a>
+            <ul>
+         <li><a href="#.html">关于我</a></li>
+         <li><a href="#.html">关于我</a></li>
+         <li><a href="#.html">关于我</a></li>
+          </ul></li>
+      <li><a href="/e/tool/gbook/?bid=3">留言</a></li>
+    </ul>
+  </div>
+      
+      <nav>
+        <div  class="navigation">
+          <ul class="menu">
+            <li><a href="../index.html">网站首页</a></li>
+            <li><a href="#">关于我</a>
+              <ul>
+                <li><a href="../about.html">个人简介</a></li>
+                <li><a href="../listpic.html">个人相册</a></li>
+              </ul>
+            </li>
+            <li><a href="#">我的日记</a>
+              <ul>
+                <li><a href="../newslistpic.html">个人日记</a></li>
+                <li><a href="../newslistpic.html">学习笔记</a></li>
+              </ul>
+            </li>
+            <li><a href="../newslistpic.html">技术文章</a> </li>
+            <li><a href="#">给我留言</a> </li>
+          </ul>
+        </div>
+      </nav>
+      <SCRIPT type=text/javascript>
+	// Navigation Menu
+	$(function() {
+		$(".menu ul").css({display: "none"}); // Opera Fix
+		$(".menu li").hover(function(){
+			$(this).find('ul:first').css({visibility: "visible",display: "none"}).slideDown("normal");
+		},function(){
+			$(this).find('ul:first').css({visibility: "hidden"});
+		});
+	});
+</SCRIPT> 
+    </div>
+  </header>
+  <div class="container">
+    <div class="con_content">
+      <div class="about_box">
+        <h2 class="nh1"><span>您现在的位置是：<a href="../" target="_blank">网站首页</a>>><a href="../post/3.html" target="_blank">下一篇</a></span><b></b></h2>
+        <div class="f_box">
+          <p class="a_title">C语言 lesson2</p>
+          <p class="p_title"></p>
+          <!--  <p class="box_p"><span>发布时间：2017-07-07 15:12:42</span><span>作者：唐孝文</span><span>来源：稽查支队</span><span>点击：111056</span></p>--> 
+          <!-- 可用于内容模板 --> 
+          <p>&nbsp; </p>
+          <p>[<span class="con_content">root@jsetc lesson1]# cat 1-数据长度.c<br>
+            #include &lt;stdio.h&gt;   //包含了函数的声明、类型定义</span></p>
+          <p class="con_content">int main()<br>
+            {<br>
+            int a = 0;<br>
+            printf(&quot;int %d\n&quot;, sizeof(int));<br>
+            printf(&quot;int %d\n&quot;, sizeof(a));<br>
+            printf(&quot;char %d\n&quot;, sizeof(char));<br>
+            printf(&quot;short %d\n&quot;, sizeof(short));<br>
+            printf(&quot;long %d\n&quot;, sizeof(long));<br>
+            printf(&quot;float %d\n&quot;, sizeof(float));<br>
+            printf(&quot;double %d\n&quot;, sizeof(double));</p>
+          <p class="con_content"> return 0;<br>
+            }<br>
+            [root@jsetc lesson1]# cat 2-补码.c<br>
+            #include &lt;stdio.h&gt;</p>
+          <p class="con_content">int main()<br>
+            {<br>
+            int i = -20;<br>
+            unsigned int j = 20;</p>
+          <p class="con_content"> printf(&quot;%d\n&quot;, i + j);  //%d表示输出有符号整数   %u表示输出无符号整数</p>
+          <p class="con_content"> if (i + j &gt; 0)<br>
+            {<br>
+            printf(&quot;xxxx\n&quot;);<br>
+            }</p>
+          <p class="con_content"> return 0;<br>
+            }<br>
+            [root@jsetc lesson1]# cat 3-strlen.c<br>
+            #include &lt;stdio.h&gt;<br>
+            #include &lt;string.h&gt;</p>
+          <p class="con_content">int main()<br>
+            { <br>
+            char *s = &quot;hello\0world&quot;;   // \0是字符串结束标志</p>
+          <p class="con_content"> printf(&quot;%d\n&quot;, strlen(s));  //strlen遇到字符\0结束</p>
+          <p class="con_content"> char ch1 = 'a';<br>
+            printf(&quot;%d\n&quot;, ch1);<br>
+            char ch = '\0';<br>
+            printf(&quot;%d\n&quot;, ch);       //strlen遇到数字0结束</p>
+          <p class="con_content"> char a[1000] = {0};<br>
+            int i;</p>
+          <p class="con_content"> for (i = 0; i &lt; 1000; i++)<br>
+            {<br>
+            a[i] = -1 - i;<br>
+            printf(&quot;%d &quot;, a[i]);<br>
+            }<br>
+            printf(&quot;\n%d\n&quot;, strlen(a));</p>
+          <p class="con_content"> return 0;<br>
+            }<br>
+            [root@jsetc lesson1]# cat 4-const.c<br>
+            #include &lt;stdio.h&gt;</p>
+          <p class="con_content">int main()<br>
+            {<br>
+            const int a = 0;   //const修饰只读变量，不能通过变量a修改对应内存的值，可以通过其他方式修改<br>
+            //a++;    // a = a + 1;<br>
+            int *p = (int *)&amp;a;<br>
+            *p = 100;<br>
+            printf(&quot;a = %d\n&quot;, a);</p>
+          <p class="con_content"> /*<br>
+            int b = 1;<br>
+            const int *pb = &amp;b;<br>
+            int *const pb = &amp;b;<br>
+            const int *const pb = &amp;b;<br>
+            */<br>
+  <br>
+            return 0;<br>
+            }<br>
+            [root@jsetc lesson1]# cat 5-常量.c<br>
+            #include &lt;stdio.h&gt;</p>
+          <p class="con_content">#define AAA 100  //整形常量<br>
+            #define CH   'A'   //字符常量<br>
+            #define STR   &quot;helloworld&quot;   //字符串常量</p>
+          <p class="con_content">int main()<br>
+            {<br>
+            /*int a = 1;   //变量 <br>
+            a * 10;      //10也是常量<br>
+            a * 10l;     //表示long类型常量<br>
+            a * 10U; </p>
+          <p class="con_content"> printf(&quot;\t helloworld\n&quot;);*/</p>
+          <p class="con_content"> char aa[10] = &quot;helloworld&quot;;<br>
+            printf(&quot;%s\n&quot;, aa);</p>
+          <p class="con_content"> int a = 1;<br>
+            char b = 'a';</p>
+          <p class="con_content"> a = (int)b;   //强转</p>
+          <p class="con_content"> return 0;<br>
+            }<br>
+            [root@jsetc lesson1]# cat 6-逻辑运算符.c<br>
+            #include &lt;stdio.h&gt;</p>
+          <p class="con_content">int f1()<br>
+            {<br>
+            printf(&quot;f1\n&quot;);<br>
+            return 1;<br>
+            }</p>
+          <p class="con_content">int f2()<br>
+            {<br>
+            printf(&quot;f2\n&quot;);<br>
+            return 0;<br>
+            }<br>
+          </p>
+          <p class="con_content">int main()<br>
+            {<br>
+            int a = 1, b = 0;</p>
+          <p class="con_content"> if (a &amp;&amp; b)   //&amp;&amp;要求两个表达式都成立（非0）<br>
+            {<br>
+            printf(&quot;成立1\n&quot;);<br>
+            }</p>
+          <p class="con_content"> if (a || b)<br>
+            {<br>
+            printf(&quot;成立2\n&quot;);<br>
+            }</p>
+          <p class="con_content"> if (f2() &amp;&amp; f1())  //短路原则  如果表达式1不成立，不会执行表达式2<br>
+            {<br>
+            printf(&quot;3\n&quot;);<br>
+            }</p>
+          <p class="con_content"> return 0;<br>
+            }<br>
+            [root@jsetc lesson1]# cat 7-位运算.c<br>
+            #include &lt;stdio.h&gt;</p>
+          <p class="con_content">int main()<br>
+            {<br>
+            char ch;<br>
+            int i, count = 0;</p>
+          <p class="con_content"> scanf(&quot;%c&quot;, &amp;ch);</p>
+          <p class="con_content"> for (i = 0; i &lt; 8; i++)<br>
+            {<br>
+            if (ch &amp; 1 == 1)<br>
+            {<br>
+            count++;<br>
+            }<br>
+            ch = ch &gt;&gt; 1;<br>
+            }<br>
+            printf(&quot;%d\n&quot;, count);</p>
+          <p class="con_content"> return 0;<br>
+            }<br>
+            [root@jsetc lesson1]# cat 8-位运算.c<br>
+            #include &lt;stdio.h&gt;</p>
+          <p class="con_content">int main()<br>
+            {<br>
+            int num, p1, p2, i;</p>
+          <p class="con_content"> scanf(&quot;%d%d%d&quot;, &amp;num, &amp;p1, &amp;p2);</p>
+          <p class="con_content"> if (p1 &gt; p2 || p1 &gt; 32 || p2 &gt; 32)<br>
+            {<br>
+            printf(&quot;输入有误\n&quot;);<br>
+            return -1;<br>
+            }</p>
+          <p class="con_content"> for (i = 0; i &lt; p2 - p1 + 1; i++)<br>
+            {<br>
+            printf(&quot;%d&quot;, (~((num &gt;&gt; (p2 - 1 - i)) &amp; 1)) &amp; 1); <br>
+            }<br>
+            printf(&quot;\n&quot;);</p>
+          <p class="con_content"> return 0;<br>
+            }<br>
+            [root@jsetc lesson1]# cat 9-条件运算符.c<br>
+            #include &lt;stdio.h&gt;</p>
+          <p class="con_content">int main()<br>
+            { <br>
+            int a = 1, b = 2;<br>
+            int max = (a &gt; b) ? a : b;  //三目运算符，需要三个表达式</p>
+          <p class="con_content"> //(a &gt; b) ? a : b = 100;    //条件运算符不能作为左值使用 (a &gt; b) ? a : b结果是2   2 = 100;</p>
+          <p class="con_content"> return 0;<br>
+            }<br>
+            [root@jsetc lesson1]# cat 10-自增.c<br>
+            #include &lt;stdio.h&gt;</p>
+          <p class="con_content">int main()<br>
+            {<br>
+            int i = 0;<br>
+            i++;    //i = i + 1;<br>
+            i + 1;</p>
+          <p class="con_content"> int a = 0;<br>
+            printf(&quot;a = %d\n&quot;, a++);   //执行完表达式后，a的值加一<br>
+            printf(&quot;a = %d\n&quot;, ++a);   //执行表达式前，a的值加一</p>
+          <p class="con_content"> return 0;<br>
+            }<br>
+            [root@jsetc lesson1]# cat 11-输入输出.c<br>
+            #include &lt;stdio.h&gt;</p>
+          <p class="con_content">int main()<br>
+            {<br>
+            int a;<br>
+            char b;<br>
+            char c[32] = {0};</p>
+          <p class="con_content"> //scanf(&quot;%d %c%s&quot;, &amp;a, &amp;b, c);</p>
+          <p class="con_content"> scanf(&quot;%d&quot;, &amp;a);<br>
+            getchar();         //获取标准输入中的换行符<br>
+            scanf(&quot;%c&quot;, &amp;b);<br>
+            scanf(&quot;%s&quot;, c);</p>
+          <p class="con_content"> printf(&quot;%d %c %s\n&quot;, a, b, c);</p>
+          <p class="con_content"> int i;<br>
+            for (i = 0; i &lt; 3; i++)<br>
+            {<br>
+            printf(&quot;%d &quot;, i);   // \n刷新缓冲区<br>
+            fflush(stdout);<br>
+            sleep(1);<br>
+            }</p>
+          <p class="con_content"> printf(&quot;\n&quot;);<br>
+            int k = 100;<br>
+            printf(&quot;%o\n&quot;, k);  //八进制输出<br>
+            printf(&quot;%10d\n&quot;, k);<br>
+            printf(&quot;%x\n&quot;, k);<br>
+            printf(&quot;%p\n&quot;, k);</p>
+          <p class="con_content"> double x = 22.0 / 7.0;</p>
+          <p class="con_content"> printf(&quot;%15.5f\n&quot;, x);</p>
+          <p class="con_content"> return 0;<br>
+            }<br>
+            [root@jsetc lesson1]# cat 12-控制结构.c<br>
+            #include &lt;stdio.h&gt;</p>
+          <p class="con_content">int main()<br>
+            {<br>
+            int num1, num2, result;<br>
+            char opt;</p>
+          <p class="con_content"> scanf(&quot;%d%c%d&quot;, &amp;num1, &amp;opt, &amp;num2);</p>
+          <p class="con_content"> /*if ('+' == opt)<br>
+            {<br>
+            result = num1 + num2;<br>
+            }<br>
+            else if ('-' == opt)<br>
+            {<br>
+            result = num1 - num2;<br>
+            }<br>
+            else if ('*' == opt)<br>
+            {<br>
+            result = num1 * num2;<br>
+            }<br>
+            else<br>
+            {<br>
+            result = num1 / num2;<br>
+            }*/</p>
+          <p class="con_content"> switch(opt)<br>
+            { <br>
+            case '+':<br>
+            result = num1 + num2;<br>
+            break;<br>
+            case '-':<br>
+            result = num1 - num2;<br>
+            break;<br>
+            case '*':<br>
+            result = num1 * num2;<br>
+            break;<br>
+            case '/':<br>
+            result = num1 / num2;<br>
+            break;<br>
+            default:<br>
+            printf(&quot;error\n&quot;);<br>
+            }<br>
+  <br>
+            printf(&quot;%d\n&quot;, result);</p>
+          <p class="con_content"> return 0;<br>
+            }<br>
+            [root@jsetc lesson1]# cat 13-while.c<br>
+            #include &lt;stdio.h&gt;</p>
+          <p class="con_content">int main()<br>
+            {<br>
+            double price = 200;<br>
+            int sum = 0, year = 0;</p>
+          <p class="con_content"> /*while (1)<br>
+            {<br>
+            sum += 40;<br>
+            price = price * 1.1;</p>
+          <p class="con_content"> if (sum &gt;= price)<br>
+            {<br>
+            break;<br>
+            }<br>
+            else<br>
+            {<br>
+            printf(&quot;第%d年买不起\n&quot;, ++year);<br>
+            }<br>
+            }*/</p>
+          <p class="con_content"> while (sum &lt; price)<br>
+            {<br>
+            sum += 40;<br>
+            price = price * 1.1;<br>
+            printf(&quot;第%d年买不起\n&quot;, ++year);<br>
+            }</p>
+          <p class="con_content"> printf(&quot;第%d年买房了\n&quot;, year);</p>
+          <p class="con_content"> return 0;<br>
+            }<br>
+            [root@jsetc lesson1]# cat 14-for.c<br>
+            #include &lt;stdio.h&gt;</p>
+          <p class="con_content">int main()<br>
+            {<br>
+            int i;<br>
+            for (i = 0,printf(&quot;111\n&quot;); i &lt; 5,printf(&quot;2222i=%d&quot;, i); i++,printf(&quot;33333i=%d\n&quot;, i))<br>
+            {<br>
+            if (i == 5)<br>
+            {<br>
+            break;<br>
+            //continue;    //结束本次循环，继续下一次循环<br>
+            }<br>
+            printf(&quot;helloworld\n&quot;);<br>
+            }</p>
+          <p class="con_content"> int j;<br>
+            for (i = 0; i &lt; 5; i++)<br>
+            {<br>
+            for (j = 0; j &lt; 1000; j++);<br>
+            }</p>
+          <p class="con_content"> return 0;<br>
+            }</p>
+          <p class="con_content">&nbsp;</p>
+         
+          <h4>&nbsp;</h4>
+          <h4><br>
+          </h4>
+          <h4></h4>
+          <h4><br>
+          </h4>
+          <h4>&nbsp;</h4>
+           <h4 align="right"> 评论及排版完善尚在进行中，能力有限，请见谅！ ---------2019年11月12日</h4>
+        </div>
+           <div class="nextinfos">
+      <p>上一篇：<a href="4.html">Linux shell编程入门</a></p>
+      <p>下一篇：<a href="6.html">有惊喜</a></p>
+    </div> 
+        
+        
+     
+      </div>
+    </div>
+    <div class="blank"></div>
+  </div>
+  <!-- container代码 结束 -->
+  
+  <footer>
+    <div class="footer">
+      <div class="f_l">
+        <p>All Rights Reserved 版权所有：<a href="http://rjxj513.xyz">一蓑烟雨个人博客</a> 备案号：京ICP备00000000号</p>
+      </div>
+      <div class="f_r textr">
+        <p>Design by DanceSmile</p>
+      </div>
+    </div>
+  </footer>
+</div>
+</body>
+</html>

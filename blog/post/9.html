@@ -1,0 +1,376 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>一蓑烟雨个人博客</title>
+<meta name="keywords" content="一蓑烟雨个人博客" />
+<meta name="description" content="一蓑烟雨个人博客" />
+<link href="../css/base.css" rel="stylesheet">
+<link href="../css/main.css" rel="stylesheet">
+<link href="../css/m.css" rel="stylesheet">
+<!--[if lt IE 9]>
+<script src="js/modernizr.js"></script>
+<![endif]-->
+<script type="text/javascript" src="js/jquery.js"></script>
+</head>
+<body>
+<script>
+window.onload = function ()
+{
+	var oH2 = document.getElementsByTagName("h2")[0];
+	var oUl = document.getElementsByTagName("ul")[0];
+	oH2.onclick = function ()
+	{
+		var style = oUl.style;
+		style.display = style.display == "block" ? "none" : "block";
+		oH2.className = style.display == "block" ? "open" : ""
+	}
+}
+</script>
+<div id="wrapper">
+  <header>
+    <div class="headtop"></div>
+    <div class="contenttop">
+      <div class="logo f_l">一蓑烟雨个人博客</div>
+      <div class="search f_r">
+        <form action="/e/search/index.php" method="post" name="searchform" id="searchform">
+          <input name="keyboard" id="keyboard" class="input_text" value="请输入关键字" style="color: rgb(153, 153, 153);" onfocus="if(value=='请输入关键字'){this.style.color='#000';value=''}" onblur="if(value==''){this.style.color='#999';value='请输入关键字'}" type="text">
+          <input name="show" value="title" type="hidden">
+          <input name="tempid" value="1" type="hidden">
+          <input name="tbname" value="news" type="hidden">
+          <input name="Submit" class="input_submit" value="搜索" type="submit">
+        </form>
+      </div>
+      <div class="blank"></div>
+      
+      <div id="mnav">
+    <h2><span class="navicon"></span></h2>
+    <ul>
+      <li><a href="../">网站首页</a></li>
+      <li><a href="../about.html">关于我</a></li>
+      <li><a href="../download/">模板分享</a>
+         <ul>
+         <li><a href="#.html">关于我</a></li>
+         <li><a href="#.html">关于我</a></li>
+         <li><a href="#.html">关于我</a></li>
+          </ul>
+        </li>
+      <li><a href="/jstt/">学无止境</a>
+            <ul>
+         <li><a href="#.html">关于我</a></li>
+         <li><a href="#.html">关于我</a></li>
+         <li><a href="#.html">关于我</a></li>
+          </ul></li>
+      <li><a href="/news/">慢生活</a>
+            <ul>
+         <li><a href="#.html">关于我</a></li>
+         <li><a href="#.html">关于我</a></li>
+         <li><a href="#.html">关于我</a></li>
+          </ul></li>
+      <li><a href="/e/tool/gbook/?bid=3">留言</a></li>
+    </ul>
+  </div>
+      
+      <nav>
+        <div  class="navigation">
+          <ul class="menu">
+            <li><a href="../index.html">网站首页</a></li>
+            <li><a href="#">关于我</a>
+              <ul>
+                <li><a href="../about.html">个人简介</a></li>
+                <li><a href="../listpic.html">个人相册</a></li>
+              </ul>
+            </li>
+            <li><a href="#">我的日记</a>
+              <ul>
+                <li><a href="../newslistpic.html">个人日记</a></li>
+                <li><a href="../newslistpic.html">学习笔记</a></li>
+              </ul>
+            </li>
+            <li><a href="../newslistpic.html">技术文章</a> </li>
+            <li><a href="#">给我留言</a> </li>
+          </ul>
+        </div>
+      </nav>
+      <SCRIPT type=text/javascript>
+	// Navigation Menu
+	$(function() {
+		$(".menu ul").css({display: "none"}); // Opera Fix
+		$(".menu li").hover(function(){
+			$(this).find('ul:first').css({visibility: "visible",display: "none"}).slideDown("normal");
+		},function(){
+			$(this).find('ul:first').css({visibility: "hidden"});
+		});
+	});
+</SCRIPT> 
+    </div>
+  </header>
+  <div class="container">
+    <div class="con_content">
+      <div class="about_box">
+        <h2 class="nh1"><span>您现在的位置是：<a href="../" target="_blank">网站首页</a>>><a href="../post/3.html" target="_blank">下一篇</a></span><b></b></h2>
+        <div class="f_box">
+          <p class="a_title">C语言 lesson3</p>
+          <p class="p_title"></p>
+          <!--  <p class="box_p"><span>发布时间：2017-07-07 15:12:42</span><span>作者：唐孝文</span><span>来源：稽查支队</span><span>点击：111056</span></p>--> 
+          <!-- 可用于内容模板 --> 
+          <p>&nbsp; </p>
+          <p>[root@jsetc lesson3]# cat 1-指针的概念.c<br>
+            #include &lt;stdio.h&gt;
+          <p>void swap(int *x, int *y)<br>
+            {<br>
+            int t = *x;<br>
+            *x = *y;<br>
+            *y = t;<br>
+            }</p>
+          <p>int main()<br>
+            {<br>
+            int a = 1;<br>
+            char b = 'a';</p>
+          <p> int *pa = &amp;a;<br>
+            //int *pb = &amp;b;<br>
+            char *pb = &amp;b;</p>
+          <p> *pa = 100;   //a = 100;<br>
+            printf(&quot;a = %d\n&quot;, a);</p>
+          <p> printf(&quot;%p\n&quot;, pa);<br>
+            printf(&quot;%p\n&quot;, pb);</p>
+          <p> printf(&quot;%p\n&quot;, pa + 1);<br>
+            printf(&quot;%p\n&quot;, pb + 1);</p>
+          <p> printf(&quot;%d\n&quot;, sizeof(int *));<br>
+            printf(&quot;%d\n&quot;, sizeof(char *));<br>
+            printf(&quot;%d\n&quot;, sizeof(double *));<br>
+            printf(&quot;%d\n&quot;, sizeof(float *));</p>
+          <p> int m = 1, n = 2;<br>
+            swap(&amp;m, &amp;n);   //如果要修改实参的值，一定要传地址（地址传递）<br>
+            printf(&quot;m = %d n = %d\n&quot;, m, n);</p>
+          <p> return 0;<br>
+            }<br>
+            [root@jsetc lesson3]# cat 2-strcpy.c<br>
+            #include &lt;stdio.h&gt;</p>
+          <p>void mystrcpy(char *s, const char *p)<br>
+            {<br>
+            if (NULL == s)   //入参判断<br>
+            return;</p>
+          <p> /*while (*p != '\0')<br>
+            {<br>
+            *s = *p;<br>
+            s++;<br>
+            p++;<br>
+            }<br>
+            *s = '\0';*/</p>
+          <p> while ((*s++ = *p++) != '\0');<br>
+            }</p>
+          <p>void f1()<br>
+            {<br>
+            int a = 1;<br>
+            const int *p = &amp;a;   //const修饰*p<br>
+            p++;<br>
+            //(*p)++;</p>
+          <p> int *const p1 = &amp;a;<br>
+            //p1++;<br>
+            (*p1)++;</p>
+          <p> const int *const p2 = &amp;a;<br>
+            //(*p2)++;<br>
+            //p2++:;<br>
+            }</p>
+          <p>int main()<br>
+            {<br>
+            char str[32] = &quot;1111111111111&quot;;<br>
+            char ptr[32] = &quot;helloworld&quot;;</p>
+          <p> mystrcpy(str, ptr);<br>
+            printf(&quot;%s\n&quot;, str);<br>
+            return 0;<br>
+            }<br>
+            [root@jsetc lesson3]# cat 3-指针的使用.c<br>
+            #include &lt;stdio.h&gt;<br>
+            #include &lt;stdlib.h&gt;</p>
+          <p>int main()<br>
+            {<br>
+            //int *p = (int *)0x1000;<br>
+            //*p = 100;</p>
+          <p> int a;<br>
+            int *pa = &amp;a;<br>
+            *pa = 100;</p>
+          <p> //int *p3;<br>
+            //*p3 = 100;</p>
+          <p> int *p2 = (int *)malloc(sizeof(int) * 100);<br>
+            if (NULL == p2)   //返回值判断<br>
+            {<br>
+            printf(&quot;申请失败\n&quot;);<br>
+            return -1;<br>
+            }<br>
+            *p2 = 10;<br>
+            *(p2 + 1) = 100;<br>
+            free(p2);</p>
+          <p> return 0;<br>
+            }<br>
+            [root@jsetc lesson3]# cat 4-字符串翻转.c<br>
+            #include &lt;stdio.h&gt;<br>
+            #include &lt;stdlib.h&gt;<br>
+            #include &lt;string.h&gt;</p>
+          <p>/*<br>
+            函数描述：字符串反转<br>
+            函数参数：字符串的开始地址  字符串的结束地址<br>
+            函数返回值：没有<br>
+            */<br>
+            void reverse(char *begin, char *end)<br>
+            {<br>
+            int length = end - begin + 1;<br>
+            int i;<br>
+            for (i = 0; i &lt; length / 2; i++)<br>
+            {<br>
+            char ch = *(begin + i);<br>
+            *(begin + i)= *(end - i);<br>
+            *(end - i) = ch;<br>
+            }<br>
+            }</p>
+          <p>int main()<br>
+            {<br>
+            char *str = (char *)malloc(sizeof(char) * 1024);<br>
+            if (NULL == str)<br>
+            {<br>
+            printf(&quot;malloc filaure\n&quot;);<br>
+            return -1;<br>
+            }<br>
+            char *s = str;</p>
+          <p> char ch;<br>
+            int i = 0;<br>
+            while ((ch = getchar()) != '\n')<br>
+            {<br>
+            *(str + i++) = ch;<br>
+            }</p>
+          <p> reverse(str, str + strlen(str) - 1);</p>
+          <p> char *begin = str;<br>
+            while (*str != '\0')<br>
+            {<br>
+            if (*str == ' ')<br>
+            {<br>
+            reverse(begin, str - 1);<br>
+            begin = str + 1;<br>
+            }<br>
+            str++;<br>
+            }<br>
+            reverse(begin, str - 1);</p>
+          <p> printf(&quot;%s\n&quot;, s);</p>
+          <p> return 0;<br>
+            }<br>
+            [root@jsetc lesson3]# cat 5-指针和数组.c<br>
+            #include &lt;stdio.h&gt;<br>
+            #include &lt;string.h&gt;<br>
+            #include &lt;stdlib.h&gt;</p>
+          <p>int main()<br>
+            {<br>
+            int a[5] = {1, 2, 3, 4, 5};<br>
+            //int *p = a;<br>
+            int *p = &amp;a[0];<br>
+            //int *p = &amp;a;</p>
+          <p> int i;<br>
+            for (i = 0; i &lt; 5; i++)<br>
+            {<br>
+            //printf(&quot;%d &quot;, a[i]);     //下标法<br>
+            printf(&quot;%d &quot;, *(p + i));   //指针法<br>
+            }<br>
+            printf(&quot;\n&quot;);</p>
+          <p> char *s = (char *)malloc(sizeof(char) * 128);<br>
+            strcpy(s, &quot;helloworld&quot;);<br>
+            printf(&quot;%c\n&quot;, s[1]);</p>
+          <p> return 0;<br>
+            }<br>
+            [root@jsetc lesson3]# cat 6-指针数组.c<br>
+            #include &lt;stdio.h&gt;</p>
+          <p>int main()<br>
+            {<br>
+            char *s[] = {&quot;hello&quot;, &quot;world&quot;};<br>
+            printf(&quot;%s\n&quot;, *s);<br>
+            return 0;<br>
+            }<br>
+            [root@jsetc lesson3]# cat 7-字符数组和字符串.c<br>
+            #include &lt;stdio.h&gt;<br>
+            #include &lt;string.h&gt;</p>
+          <p>int main()<br>
+            {<br>
+            //char a[32] = &quot;helloworld&quot;;<br>
+            char a[32] = {0};    //数组名是常指针<br>
+            //a = &quot;helloworld&quot;;    //字符串常量<br>
+            strcpy(a, &quot;helloworld&quot;);</p>
+          <p> char *s = &quot;helloworld&quot;;<br>
+            char *q;<br>
+            q = &quot;helloworld&quot;;</p>
+          <p> return 0;<br>
+            }<br>
+            [root@jsetc lesson3]# cat 8-字符串排序.c<br>
+            #include &lt;stdio.h&gt;<br>
+            #include &lt;stdlib.h&gt;</p>
+          <p>#define SIZE    5</p>
+          <p>void sort(char *s[])<br>
+            {<br>
+            int i, j;</p>
+          <p> for (i = 0; i &lt; SIZE - 1; i++)<br>
+            {<br>
+            for (j = 0; j &lt; SIZE - i - 1; j++)<br>
+            {<br>
+            if (strcmp(s[j], s[j + 1]) &gt; 0)<br>
+            {<br>
+            char *t = s[j];<br>
+            s[j] = s[j + 1];<br>
+            s[j + 1] = t;<br>
+            }<br>
+            }<br>
+            }<br>
+            }</p>
+          <p>int main()<br>
+            {<br>
+            int i;<br>
+            char *str[SIZE] = {0};</p>
+          <p> for (i = 0; i &lt; SIZE; i++)<br>
+            {<br>
+            str[i] = (char *)malloc(sizeof(char) * 32);<br>
+            scanf(&quot;%s&quot;, str[i]);<br>
+            }</p>
+          <p> sort(str);</p>
+          <p> for (i = 0; i &lt; SIZE; i++)<br>
+            {<br>
+            printf(&quot;%s &quot;, str[i]);<br>
+            }<br>
+            printf(&quot;\n&quot;);</p>
+          <p> return 0;<br>
+            }<br>
+            [root@jsetc lesson3]# <br>
+          </p>
+          <p><br>
+            
+          <h4>&nbsp;</h4>
+          <h4><br>
+          </h4>
+          <h4></h4>
+          <h4><br>
+          </h4>
+          <h4>&nbsp;</h4>
+           <h4 align="right"> 评论及排版完善尚在进行中，能力有限，请见谅！ ---------2019年11月14日</h4>
+        </div>
+           <div class="nextinfos">
+      <p>上一篇：<a href="4.html">Linux shell编程入门</a></p>
+      <p>下一篇：<a href="6.html">有惊喜</a></p>
+    </div> 
+        
+        
+     
+      </div>
+    </div>
+    <div class="blank"></div>
+  </div>
+  <!-- container代码 结束 -->
+  
+  <footer>
+    <div class="footer">
+      <div class="f_l">
+        <p>All Rights Reserved 版权所有：<a href="http://rjxj513.xyz">一蓑烟雨个人博客</a> 备案号：京ICP备00000000号</p>
+      </div>
+      <div class="f_r textr">
+        <p>Design by DanceSmile</p>
+      </div>
+    </div>
+  </footer>
+</div>
+</body>
+</html>

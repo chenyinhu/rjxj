@@ -1,0 +1,369 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>一蓑烟雨个人博客</title>
+<meta name="keywords" content="一蓑烟雨个人博客" />
+<meta name="description" content="一蓑烟雨个人博客" />
+<link href="../css/base.css" rel="stylesheet">
+<link href="../css/main.css" rel="stylesheet">
+<link href="../css/m.css" rel="stylesheet">
+<!--[if lt IE 9]>
+<script src="js/modernizr.js"></script>
+<![endif]-->
+<script type="text/javascript" src="js/jquery.js"></script>
+</head>
+<body>
+<script>
+window.onload = function ()
+{
+	var oH2 = document.getElementsByTagName("h2")[0];
+	var oUl = document.getElementsByTagName("ul")[0];
+	oH2.onclick = function ()
+	{
+		var style = oUl.style;
+		style.display = style.display == "block" ? "none" : "block";
+		oH2.className = style.display == "block" ? "open" : ""
+	}
+}
+</script>
+<div id="wrapper">
+  <header>
+    <div class="headtop"></div>
+    <div class="contenttop">
+      <div class="logo f_l">一蓑烟雨个人博客</div>
+      <div class="search f_r">
+        <form action="/e/search/index.php" method="post" name="searchform" id="searchform">
+          <input name="keyboard" id="keyboard" class="input_text" value="请输入关键字" style="color: rgb(153, 153, 153);" onfocus="if(value=='请输入关键字'){this.style.color='#000';value=''}" onblur="if(value==''){this.style.color='#999';value='请输入关键字'}" type="text">
+          <input name="show" value="title" type="hidden">
+          <input name="tempid" value="1" type="hidden">
+          <input name="tbname" value="news" type="hidden">
+          <input name="Submit" class="input_submit" value="搜索" type="submit">
+        </form>
+      </div>
+      <div class="blank"></div>
+      
+      <div id="mnav">
+    <h2><span class="navicon"></span></h2>
+    <ul>
+      <li><a href="../">网站首页</a></li>
+      <li><a href="../about.html">关于我</a></li>
+      <li><a href="../download/">模板分享</a>
+         <ul>
+         <li><a href="#.html">关于我</a></li>
+         <li><a href="#.html">关于我</a></li>
+         <li><a href="#.html">关于我</a></li>
+          </ul>
+        </li>
+      <li><a href="/jstt/">学无止境</a>
+            <ul>
+         <li><a href="#.html">关于我</a></li>
+         <li><a href="#.html">关于我</a></li>
+         <li><a href="#.html">关于我</a></li>
+          </ul></li>
+      <li><a href="/news/">慢生活</a>
+            <ul>
+         <li><a href="#.html">关于我</a></li>
+         <li><a href="#.html">关于我</a></li>
+         <li><a href="#.html">关于我</a></li>
+          </ul></li>
+      <li><a href="/e/tool/gbook/?bid=3">留言</a></li>
+    </ul>
+  </div>
+      
+      <nav>
+        <div  class="navigation">
+          <ul class="menu">
+            <li><a href="../index.html">网站首页</a></li>
+            <li><a href="#">关于我</a>
+              <ul>
+                <li><a href="../about.html">个人简介</a></li>
+                <li><a href="../listpic.html">个人相册</a></li>
+              </ul>
+            </li>
+            <li><a href="#">我的日记</a>
+              <ul>
+                <li><a href="../newslistpic.html">个人日记</a></li>
+                <li><a href="../newslistpic.html">学习笔记</a></li>
+              </ul>
+            </li>
+            <li><a href="../newslistpic.html">技术文章</a> </li>
+            <li><a href="#">给我留言</a> </li>
+          </ul>
+        </div>
+      </nav>
+      <SCRIPT type=text/javascript>
+	// Navigation Menu
+	$(function() {
+		$(".menu ul").css({display: "none"}); // Opera Fix
+		$(".menu li").hover(function(){
+			$(this).find('ul:first').css({visibility: "visible",display: "none"}).slideDown("normal");
+		},function(){
+			$(this).find('ul:first').css({visibility: "hidden"});
+		});
+	});
+</SCRIPT> 
+    </div>
+  </header>
+  <div class="container">
+    <div class="con_content">
+      <div class="about_box">
+        <h2 class="nh1"><span>您现在的位置是：<a href="../" target="_blank">网站首页</a>>><a href="../post/3.html" target="_blank">下一篇</a></span><b></b></h2>
+        <div class="f_box">
+          <p class="a_title">C语言 lesson5</p>
+          <p class="p_title"></p>
+          <!--  <p class="box_p"><span>发布时间：2017-07-07 15:12:42</span><span>作者：唐孝文</span><span>来源：稽查支队</span><span>点击：111056</span></p>--> 
+          <!-- 可用于内容模板 --> 
+          <p>&nbsp; </p>
+          <p>[root@jsetc lesson5]# cat 1-结构体.c<br>
+            #include &lt;stdio.h&gt;<br>
+            #include &lt;string.h&gt;<br>
+            #include &lt;stdlib.h&gt;
+          <p>struct Student   //结构体声明<br>
+            {<br>
+            char name[32];<br>
+            int id;<br>
+            char sex;<br>
+            };<br>
+            typedef struct Student stu;</p>
+          <p>int main()<br>
+            {<br>
+            struct Student s1 = {&quot;aaaa&quot;, 1, 'm'};<br>
+            stu s2;</p>
+          <p> //scanf(&quot;%s%d %c&quot;, s2.name, &amp;s2.id, &amp;s2.sex);</p>
+          <p> //s2 = (&quot;bbb&quot;, 2, 'f');<br>
+            strcpy(s2.name, &quot;bbb&quot;);<br>
+            s2.id = 1;<br>
+            s2.sex = 'f';</p>
+          <p> printf(&quot;%s %d %c\n&quot;, s1.name, s1.id, s1.sex);<br>
+            printf(&quot;%s %d %c\n&quot;, s2.name, s2.id, s2.sex);</p>
+          <p> stu *s3 = (stu *)malloc(sizeof(stu) * 1);    //结构体指针<br>
+            //scanf(&quot;%s%d %c&quot;, s3-&gt;name, &amp;s3-&gt;id, &amp;s3-&gt;sex);<br>
+            strcpy(s3-&gt;name, &quot;cccc&quot;);<br>
+            s3-&gt;id = 3;<br>
+            s3-&gt;sex = 'm';<br>
+            printf(&quot;%s %d %c\n&quot;, s3-&gt;name, s3-&gt;id, s3-&gt;sex);</p>
+          <p> stu s4[3] = {{&quot;dddd&quot;, 4, 'f'}, {&quot;eeee&quot;, 5, 'f'}, {&quot;ffff&quot;, 6, 'm'}};   //结构体数组<br>
+            int i;<br>
+            for (i = 0; i &lt; 3; i++)<br>
+            {<br>
+            printf(&quot;%s %d %c\n&quot;, s4[i].name, s4[i].id, s4[i].sex);<br>
+            }</p>
+          <p> stu *s5[3] = {0};</p>
+          <p> for (i = 0; i &lt; 3; i++)<br>
+            {<br>
+            s5[i] = (stu *)malloc(sizeof(stu) * 1);<br>
+            if (NULL == s5[i])<br>
+            {<br>
+            printf(&quot;申请失败\n&quot;);<br>
+            }<br>
+            strcpy(s5[i]-&gt;name, &quot;xxxxx&quot;);<br>
+            s5[i]-&gt;id = i + 7;<br>
+            s5[i]-&gt;sex = 'm';<br>
+            }</p>
+          <p> for (i = 0; i &lt; 3; i++)<br>
+            {<br>
+            printf(&quot;%s %d %c\n&quot;, s5[i]-&gt;name, s5[i]-&gt;id, s5[i]-&gt;sex);<br>
+            }</p>
+          <p> return 0;<br>
+            }<br>
+            [root@jsetc lesson5]# cat 2-结构体长度.c<br>
+            #include &lt;stdio.h&gt;</p>
+          <p>//结构体长度一定是最长成员的整数倍<br>
+            //每个成员的偏移量一定是该成员长度的整数倍<br>
+            struct Test<br>
+            {<br>
+            double e;  //32位操作系统 结果按照4的整数倍计算  如果是64位操作系统，结果按照8的整数倍计算<br>
+            int a;<br>
+            int c;<br>
+            char b;<br>
+            short d;<br>
+            };</p>
+          <p>struct Test1<br>
+            {<br>
+            int a[10];<br>
+            char b;<br>
+            int c;<br>
+            };</p>
+          <p>struct A<br>
+            {<br>
+            int a;<br>
+            char b;<br>
+            };</p>
+          <p>struct B<br>
+            {<br>
+            short a;<br>
+            struct A b;<br>
+            char c;<br>
+            };</p>
+          <p>int main()<br>
+            {<br>
+            printf(&quot;%d\n&quot;, sizeof(struct Test));<br>
+            printf(&quot;%d\n&quot;, sizeof(struct Test1));<br>
+            printf(&quot;%d\n&quot;, sizeof(struct B));<br>
+            return 0;<br>
+            }<br>
+            [root@jsetc lesson5]# cat 3-联合体.c<br>
+            #include &lt;stdio.h&gt;</p>
+          <p>//所有成员共享同一块内存<br>
+            union Test<br>
+            {<br>
+            int a;<br>
+            int b;<br>
+            char c;<br>
+            };</p>
+          <p>int main()<br>
+            {<br>
+            printf(&quot;%d\n&quot;, sizeof(union Test));<br>
+  <br>
+            union Test t;<br>
+            t.a = 0x10101010;</p>
+          <p> printf(&quot;%x\n&quot;, t.b);<br>
+            printf(&quot;%x\n&quot;, t.c);<br>
+            return 0;<br>
+            }<br>
+            [root@jsetc lesson5]# cat 4-字节序判断.c<br>
+            #include &lt;stdio.h&gt;</p>
+          <p>union Test<br>
+            {<br>
+            short val;<br>
+            char array[2];<br>
+            };</p>
+          <p>int main()<br>
+            {<br>
+            union Test t;<br>
+            t.val = 0x0102;</p>
+          <p> if (t.array[0] == 1 &amp;&amp; t.array[1] == 2)<br>
+            {<br>
+            printf(&quot;大端字节序\n&quot;);<br>
+            }<br>
+            else if (t.array[0] == 2 &amp;&amp; t.array[1] == 1)<br>
+            {<br>
+            printf(&quot;小端字节序\n&quot;);<br>
+            }</p>
+          <p> return 0;<br>
+            }<br>
+            [root@jsetc lesson5]# cat 5-大小端转换.c<br>
+            #include &lt;stdio.h&gt;</p>
+          <p>int main()<br>
+            {<br>
+            int num;<br>
+            scanf(&quot;%d&quot;, &amp;num);</p>
+          <p> printf(&quot;%d\n&quot;, ((num &amp; 0x000000ff) &lt;&lt; 24) | <br>
+            ((num &amp; 0x0000ff00) &lt;&lt; 8)  |<br>
+            ((num &amp; 0x00ff0000) &gt;&gt; 8)  |<br>
+            ((num &amp; 0xff000000) &gt;&gt; 24));<br>
+            return 0;<br>
+            }<br>
+            [root@jsetc lesson5]# cat 6-relloc.c<br>
+            #include &lt;stdio.h&gt;<br>
+            #include &lt;stdlib.h&gt;<br>
+            #include &lt;string.h&gt;</p>
+          <p>int main()<br>
+            {<br>
+            char *s = (char *)malloc(10);<br>
+            strcpy(s, &quot;helloworl&quot;);<br>
+            printf(&quot;%p\n&quot;, s);</p>
+          <p> s = realloc(s, 128);<br>
+            strcat(s, &quot;helloworld&quot;);<br>
+            printf(&quot;%p\n&quot;, s);</p>
+          <p> printf(&quot;%s\n&quot;, s);</p>
+          <p> s = realloc(s, 1024 * 1024 * 1024); //如果申请的内存太大，会重新找新的内存，拷贝原来的数据，释放原来的内存<br>
+            printf(&quot;%p\n&quot;, s);<br>
+            printf(&quot;%s\n&quot;, s);</p>
+          <p> free(s);</p>
+          <p> return 0;<br>
+            }<br>
+            [root@jsetc lesson5]# cat 7-内存管理.c<br>
+            #include &lt;stdio.h&gt;<br>
+            #include &lt;stdlib.h&gt;<br>
+            #include &lt;string.h&gt;</p>
+          <p>int global = 0; <br>
+            char *p1; </p>
+          <p>int main()<br>
+            {<br>
+            int a = 1; <br>
+            char s[] = &quot;abcd&quot;; <br>
+            char *p2; <br>
+            char *p3 = &quot;123456789&quot;;        //只读数据区<br>
+            //*p3 = 'x';<br>
+            static int c = 0;             //静态变量 存放在静态数据区</p>
+          <p> p1 = (char *)malloc(100); <br>
+            <br>
+            strcpy(p1, &quot;123456789&quot;); </p>
+          <p> return 0;<br>
+            }</p>
+          <p>[root@jsetc lesson5]# cat 8-枚举.c<br>
+            #include &lt;stdio.h&gt;</p>
+          <p>enum weekday<br>
+            {<br>
+            SUN,<br>
+            MON,<br>
+            TUE,<br>
+            WEN = 13,<br>
+            THU,<br>
+            FRI,<br>
+            SAT<br>
+            };</p>
+          <p>int main()<br>
+            {<br>
+            printf(&quot;%d\n&quot;, SUN);<br>
+            printf(&quot;%d\n&quot;, MON);<br>
+            printf(&quot;%d\n&quot;, TUE);<br>
+            printf(&quot;%d\n&quot;, WEN);<br>
+            printf(&quot;%d\n&quot;, THU);<br>
+            printf(&quot;%d\n&quot;, FRI);<br>
+            printf(&quot;%d\n&quot;, SAT);</p>
+          <p> return 0;<br>
+            }<br>
+            [root@jsetc lesson5]# cat 9-宏函数.c<br>
+            #include &lt;stdio.h&gt;</p>
+          <p>#define PRINT printf(&quot;helloworld\n&quot;)<br>
+            #define P(s) printf(&quot;%s&quot;, s)</p>
+          <p>/*<br>
+            宏函数优点：执行效率高（不需要不同函数名找到函数的入口地址） 节省空间<br>
+            宏函数缺点：不安全（没有语法检查） 编译效率低<br>
+            */</p>
+          <p>#define SQR(X)  ((X) * (X))</p>
+          <p>int main()<br>
+            {<br>
+            PRINT;      //无参宏函数<br>
+            P(&quot;helloworld\n&quot;);<br>
+            //P(1);   //宏函数不安全</p>
+          <p> int a = 1, b = 2;<br>
+            printf(&quot;%d\n&quot;, SQR(a + b));   //1 + 2 * 1 + 2</p>
+          <p> return 0;<br>
+            }<br>
+            <br>
+          </p>
+          <p><br>
+            
+          <h4>&nbsp;</h4>
+           <h4 align="right"> 评论及排版完善尚在进行中，能力有限，请见谅！ ---------2019年11月17日</h4>
+        </div>
+           <div class="nextinfos">
+      <p>上一篇：lesson4</p>
+      <p>下一篇：<a href="6.html">有惊喜</a></p>
+    </div> 
+        
+        
+     
+      </div>
+    </div>
+    <div class="blank"></div>
+  </div>
+  <!-- container代码 结束 -->
+  
+  <footer>
+    <div class="footer">
+      <div class="f_l">
+        <p>All Rights Reserved 版权所有：<a href="http://rjxj513.xyz">一蓑烟雨个人博客</a> 备案号：京ICP备00000000号</p>
+      </div>
+      <div class="f_r textr">
+        <p>Design by DanceSmile</p>
+      </div>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
